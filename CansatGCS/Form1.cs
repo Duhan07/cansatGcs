@@ -71,6 +71,7 @@ namespace CansatGCS
                     lblHata.Text = "İstasyonla bağlantı kuruldu !";
                     lblHata.BackColor = System.Drawing.Color.LightGreen;
 
+
                 }
                 else
                 {
@@ -80,7 +81,9 @@ namespace CansatGCS
                     btnSerialConnect.BackColor = Color.Red;
                     grbBoxSerialConnect.BackColor = Color.Red;
                     lblHata.BackColor = System.Drawing.Color.IndianRed;
-                
+                    timerCsvSave.Stop();
+
+
                 }
             }
             catch
@@ -98,6 +101,7 @@ namespace CansatGCS
             {
                 GelenVerileriGuncelleCallback d = new GelenVerileriGuncelleCallback(GelenVerileriGuncelle);
                 this.Invoke(d, new object[] { veri });
+                serialPort1.Encoding = UTF8Encoding.UTF8;
             }
             else
             {
@@ -115,7 +119,7 @@ namespace CansatGCS
                 {
                     lblHata.Text = "Ayrıstırma !!";
                 }
-              
+                serialPort1.Encoding = UTF8Encoding.UTF8;
                 gelenVerilerimiz = veri.Split(',');
                 sayac = gelenVerilerimiz.Length;
                 if (sayac == 16 && veri.Contains("1084"))
@@ -255,69 +259,93 @@ namespace CansatGCS
             timerVeriYazdir.Stop();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
+       
 
         private void btnSimModeActive_Click(object sender, EventArgs e)
         {
             // SIM MODE - ACTIVE
-            serialPort1.Write("CMD,1084,SIM,ACTIVATE");
+
+            if (serialPort1.IsOpen)
+            {serialPort1.Write("CMD,1084,SIM,ACTIVATE"); }
+                
+           
+            
         }
 
         private void btnSimModeEnable_Click(object sender, EventArgs e)
         {
             // SIM MODE - ENABLE
-            serialPort1.Write("CMD,1084,SIM,ENABLE");
+
+            if (serialPort1.IsOpen)
+            {  serialPort1.Write("CMD,1084,SIM,ENABLE"); }
+          
         }
 
         private void btnSimModeDisable_Click(object sender, EventArgs e)
         {
             // SIM MODE - DISABLE
-            serialPort1.Write("CMD,1084,SIM,DISABLE");
+            if (serialPort1.IsOpen)
+            { serialPort1.Write("CMD,1084,SIM,DISABLE"); }
+           
         }
 
         private void btnSimpModeEnter_Click(object sender, EventArgs e)
         {
             // SIMP
-            serialPort1.Write("CMD,1084,SIMP,10132");
+
+            if (serialPort1.IsOpen)
+            { serialPort1.Write("CMD,1084,SIMP,10132");}
+            
         }
 
         private void btnSglpSet_Click(object sender, EventArgs e)
         {
             // SGLP - Set Ground Level Pressure
-            serialPort1.Write("CMD,1084,SGLP,SET");
+            if (serialPort1.IsOpen)
+            { serialPort1.Write("CMD,1084,SGLP,SET");}
+            
         }
 
         private void btnSetTime_Click(object sender, EventArgs e)
         {
             // SET TIME
-            serialPort1.Write("CMD,1084,ST,12:05:27");
+            if (serialPort1.IsOpen)
+            {  serialPort1.Write("CMD,1084,ST,12:05:27");}
+           
         }
 
         private void btniMuSet_Click(object sender, EventArgs e)
         {
             // CI - Calibrate IMU
-            serialPort1.Write("CMD,1084,CI,SET");
+            if (serialPort1.IsOpen)
+            { serialPort1.Write("CMD,1084,CI,SET"); }
+           
         }
 
         private void btnTPRelease_Click(object sender, EventArgs e)
         {
             // PMREL - ON
-            serialPort1.Write("CMD,1084,PMREL,ON1");
+            if (serialPort1.IsOpen)
+            {  serialPort1.Write("CMD,1084,PMREL,ON1");}
+           
         }
 
         private void btnPmrelOff_Click(object sender, EventArgs e)
         {
             // PMREL - OFF
-            serialPort1.Write("CMD,1084,PMREL,OFF");
+
+            if (serialPort1.IsOpen)
+            {  serialPort1.Write("CMD,1084,PMREL,OFF");}
+           
         }
 
         private void btnPDeployment_Click(object sender, EventArgs e)
         {
             // PMREL - Parachute Deployment
-            // ???
+
+            if (serialPort1.IsOpen)
+            { /* ???*/ }
+           
         }
 
         private void btnCsvSaveToStop_Click(object sender, EventArgs e)
@@ -330,7 +358,7 @@ namespace CansatGCS
         string C_csvPath, T_csvPath;
         private void timerCsvSave_Tick(object sender, EventArgs e)
         {
-            Console.WriteLine(txtBoxContainerCsv.Text);
+           // Console.WriteLine(txtBoxContainerCsv.Text);
             //grbBoxCsvSave.BackColor = Color.Green;
             // Save csv Files
             C_csvPath = Path.Combine(Environment.CurrentDirectory, txtBoxContainerCsv.Text);
@@ -340,7 +368,7 @@ namespace CansatGCS
             {
                 if (lblGelenVeri.Text.Contains("1084") && sayac == 16)
                 {
-                    file.Write(lblGelenVeri.Text + ",");
+                    file.Write(lblGelenVeri.Text);
                 }
                 
             }
@@ -348,7 +376,7 @@ namespace CansatGCS
             {
                 if (lblGelenVeri.Text.Contains("6084") && sayac == 18)
                 {
-                    file.Write(lblGelenVeri.Text + ",");
+                    file.Write(lblGelenVeri.Text);
                 }
             }
             
@@ -356,30 +384,42 @@ namespace CansatGCS
 
         private void btnCsvSave_Click(object sender, EventArgs e)
         {
-            csvSil();
+          
             // Save csv files
             grbBoxCsvSave.BackColor = Color.Green;
             timerCsvSave.Start();
         }
 
+       
+        private void btnCsvSil_Click_1(object sender, EventArgs e)
+        {
+                    csvSil();
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();  // butona koyunca istasyonu yeniden baslatabiliyoruz.
+        }
 
         void csvSil()
         {
             if (File.Exists(txtBoxContainerCsv.Text))
             {
-                MessageBox.Show("Veriler silindi , listeleyebilirsiniz !");
+            
                 File.Delete(txtBoxContainerCsv.Text);
+                lblHata.Text = "Container Veriler silindi listeleyebilirsiniz !";
                 timerCsvSave.Stop();
             }
             if (File.Exists(txtBoxTetherPayloadCsv.Text))
             {
-                MessageBox.Show("Veriler silindi , listeleyebilirsiniz !");
+              
+              
                 File.Delete(txtBoxTetherPayloadCsv.Text);
+                lblHata.Text = " Payload Veriler silindi listeleyebilirsiniz !";
                 timerCsvSave.Stop();
             }
-            else { MessageBox.Show("Dosya mevcut değil."); }
+            else { lblHata.Text = "dosya yok "; }
         }
 
     }
 }
-// Application.Restart();   butona koyunca istasyonu yeniden baslatabiliyoruz.

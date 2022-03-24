@@ -29,3 +29,14 @@ C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs\CansatGCS\obj\Debug\CansatGC
 C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.CoreCompileInputs.cache
 C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs\CansatGCS\obj\Debug\CansatGCS.exe
 C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs\CansatGCS\obj\Debug\CansatGCS.pdb
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\bin\Debug\CansatGCS.exe.config
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\bin\Debug\CansatGCS.exe
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\bin\Debug\CansatGCS.pdb
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.csproj.AssemblyReference.cache
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.csproj.SuggestedBindingRedirects.cache
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.Form1.resources
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.Properties.Resources.resources
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.csproj.GenerateResource.cache
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.csproj.CoreCompileInputs.cache
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.exe
+C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.pdb
