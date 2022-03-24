@@ -91,7 +91,7 @@
             this.btnSetTime = new System.Windows.Forms.Button();
             this.btniMuSet = new System.Windows.Forms.Button();
             this.btnSglpSet = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grbBoxCsvSave = new System.Windows.Forms.GroupBox();
             this.txtBoxContainerCsv = new System.Windows.Forms.TextBox();
             this.btnCsvSaveToStop = new System.Windows.Forms.Button();
             this.btnCsvSave = new System.Windows.Forms.Button();
@@ -114,6 +114,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.richTxtBoxTPayloadTelemetri = new System.Windows.Forms.RichTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblShortTime = new System.Windows.Forms.Label();
             this.lblLongtime = new System.Windows.Forms.Label();
             this.richTxtBoxGelenVeri = new System.Windows.Forms.RichTextBox();
@@ -202,7 +203,7 @@
             this.lblPTeamid = new System.Windows.Forms.Label();
             this.timerSerialPort = new System.Windows.Forms.Timer(this.components);
             this.timerVeriYazdir = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.timerCsvSave = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartTP_Temp)).BeginInit();
@@ -224,7 +225,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grbBoxCsvSave.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grbBoxSerialConnect.SuspendLayout();
@@ -244,7 +245,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(8, 10);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1424, 838);
@@ -272,14 +273,14 @@
             this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.groupBox4);
-            this.tabPage1.Controls.Add(this.groupBox3);
+            this.tabPage1.Controls.Add(this.grbBoxCsvSave);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.grbBoxSerialConnect);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1416, 809);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "MainPanel";
@@ -289,7 +290,7 @@
             chartArea1.Name = "ChartArea1";
             this.chartTP_Temp.ChartAreas.Add(chartArea1);
             this.chartTP_Temp.Location = new System.Drawing.Point(1128, 593);
-            this.chartTP_Temp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Temp.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Temp.Name = "chartTP_Temp";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -304,7 +305,7 @@
             chartArea2.Name = "ChartArea1";
             this.chartTP_Point_Err.ChartAreas.Add(chartArea2);
             this.chartTP_Point_Err.Location = new System.Drawing.Point(1128, 401);
-            this.chartTP_Point_Err.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Point_Err.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Point_Err.Name = "chartTP_Point_Err";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -319,7 +320,7 @@
             chartArea3.Name = "ChartArea1";
             this.chartTP_Accel_R.ChartAreas.Add(chartArea3);
             this.chartTP_Accel_R.Location = new System.Drawing.Point(853, 593);
-            this.chartTP_Accel_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Accel_R.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Accel_R.Name = "chartTP_Accel_R";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -334,7 +335,7 @@
             chartArea4.Name = "ChartArea1";
             this.chartTP_Mag_R.ChartAreas.Add(chartArea4);
             this.chartTP_Mag_R.Location = new System.Drawing.Point(853, 401);
-            this.chartTP_Mag_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Mag_R.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Mag_R.Name = "chartTP_Mag_R";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -349,7 +350,7 @@
             chartArea5.Name = "ChartArea1";
             this.chartTP_Accel_P.ChartAreas.Add(chartArea5);
             this.chartTP_Accel_P.Location = new System.Drawing.Point(579, 593);
-            this.chartTP_Accel_P.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Accel_P.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Accel_P.Name = "chartTP_Accel_P";
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -364,7 +365,7 @@
             chartArea6.Name = "ChartArea1";
             this.chartTP_Mag_P.ChartAreas.Add(chartArea6);
             this.chartTP_Mag_P.Location = new System.Drawing.Point(579, 401);
-            this.chartTP_Mag_P.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Mag_P.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Mag_P.Name = "chartTP_Mag_P";
             series6.ChartArea = "ChartArea1";
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -379,7 +380,7 @@
             chartArea7.Name = "ChartArea1";
             this.chartTP_Accel_Y.ChartAreas.Add(chartArea7);
             this.chartTP_Accel_Y.Location = new System.Drawing.Point(304, 593);
-            this.chartTP_Accel_Y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Accel_Y.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Accel_Y.Name = "chartTP_Accel_Y";
             series7.ChartArea = "ChartArea1";
             series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -394,7 +395,7 @@
             chartArea8.Name = "ChartArea1";
             this.chartTP_Mag_Y.ChartAreas.Add(chartArea8);
             this.chartTP_Mag_Y.Location = new System.Drawing.Point(304, 401);
-            this.chartTP_Mag_Y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Mag_Y.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Mag_Y.Name = "chartTP_Mag_Y";
             series8.ChartArea = "ChartArea1";
             series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -409,7 +410,7 @@
             chartArea9.Name = "ChartArea1";
             this.chartTP_Gyro_R.ChartAreas.Add(chartArea9);
             this.chartTP_Gyro_R.Location = new System.Drawing.Point(1128, 209);
-            this.chartTP_Gyro_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Gyro_R.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Gyro_R.Name = "chartTP_Gyro_R";
             series9.ChartArea = "ChartArea1";
             series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -424,7 +425,7 @@
             chartArea10.Name = "ChartArea1";
             this.chartTP_Alt.ChartAreas.Add(chartArea10);
             this.chartTP_Alt.Location = new System.Drawing.Point(1128, 17);
-            this.chartTP_Alt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Alt.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Alt.Name = "chartTP_Alt";
             series10.ChartArea = "ChartArea1";
             series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -439,7 +440,7 @@
             chartArea11.Name = "ChartArea1";
             this.chartTP_Gyro_P.ChartAreas.Add(chartArea11);
             this.chartTP_Gyro_P.Location = new System.Drawing.Point(853, 209);
-            this.chartTP_Gyro_P.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Gyro_P.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Gyro_P.Name = "chartTP_Gyro_P";
             series11.ChartArea = "ChartArea1";
             series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -454,7 +455,7 @@
             chartArea12.Name = "ChartArea1";
             this.chartC_Volt.ChartAreas.Add(chartArea12);
             this.chartC_Volt.Location = new System.Drawing.Point(853, 17);
-            this.chartC_Volt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartC_Volt.Margin = new System.Windows.Forms.Padding(4);
             this.chartC_Volt.Name = "chartC_Volt";
             series12.ChartArea = "ChartArea1";
             series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -469,7 +470,7 @@
             chartArea13.Name = "ChartArea1";
             this.chartTP_Gyro_Y.ChartAreas.Add(chartArea13);
             this.chartTP_Gyro_Y.Location = new System.Drawing.Point(579, 209);
-            this.chartTP_Gyro_Y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Gyro_Y.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Gyro_Y.Name = "chartTP_Gyro_Y";
             series13.ChartArea = "ChartArea1";
             series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -484,7 +485,7 @@
             chartArea14.Name = "ChartArea1";
             this.chartC_Temp.ChartAreas.Add(chartArea14);
             this.chartC_Temp.Location = new System.Drawing.Point(579, 17);
-            this.chartC_Temp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartC_Temp.Margin = new System.Windows.Forms.Padding(4);
             this.chartC_Temp.Name = "chartC_Temp";
             series14.ChartArea = "ChartArea1";
             series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -499,7 +500,7 @@
             chartArea15.Name = "ChartArea1";
             this.chartTP_Volt.ChartAreas.Add(chartArea15);
             this.chartTP_Volt.Location = new System.Drawing.Point(304, 209);
-            this.chartTP_Volt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartTP_Volt.Margin = new System.Windows.Forms.Padding(4);
             this.chartTP_Volt.Name = "chartTP_Volt";
             series15.ChartArea = "ChartArea1";
             series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -514,7 +515,7 @@
             chartArea16.Name = "ChartArea1";
             this.chartC_Alt.ChartAreas.Add(chartArea16);
             this.chartC_Alt.Location = new System.Drawing.Point(304, 17);
-            this.chartC_Alt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartC_Alt.Margin = new System.Windows.Forms.Padding(4);
             this.chartC_Alt.Name = "chartC_Alt";
             series16.ChartArea = "ChartArea1";
             series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -530,9 +531,9 @@
             this.groupBox6.Controls.Add(this.btnMqttStop);
             this.groupBox6.Controls.Add(this.btnMqttStart);
             this.groupBox6.Location = new System.Drawing.Point(11, 656);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(267, 121);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
@@ -541,7 +542,7 @@
             // txtBoxMqttCsv
             // 
             this.txtBoxMqttCsv.Location = new System.Drawing.Point(11, 23);
-            this.txtBoxMqttCsv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxMqttCsv.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxMqttCsv.Name = "txtBoxMqttCsv";
             this.txtBoxMqttCsv.Size = new System.Drawing.Size(247, 22);
             this.txtBoxMqttCsv.TabIndex = 0;
@@ -552,7 +553,7 @@
             // 
             this.btnMqttStop.BackColor = System.Drawing.Color.Salmon;
             this.btnMqttStop.Location = new System.Drawing.Point(143, 55);
-            this.btnMqttStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMqttStop.Margin = new System.Windows.Forms.Padding(4);
             this.btnMqttStop.Name = "btnMqttStop";
             this.btnMqttStop.Size = new System.Drawing.Size(108, 57);
             this.btnMqttStop.TabIndex = 0;
@@ -563,7 +564,7 @@
             // 
             this.btnMqttStart.BackColor = System.Drawing.Color.LightSalmon;
             this.btnMqttStart.Location = new System.Drawing.Point(11, 55);
-            this.btnMqttStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMqttStart.Margin = new System.Windows.Forms.Padding(4);
             this.btnMqttStart.Name = "btnMqttStart";
             this.btnMqttStart.Size = new System.Drawing.Size(108, 57);
             this.btnMqttStart.TabIndex = 0;
@@ -576,9 +577,9 @@
             this.groupBox5.Controls.Add(this.btnPDeployment);
             this.groupBox5.Controls.Add(this.btnTPRelease);
             this.groupBox5.Location = new System.Drawing.Point(8, 535);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(267, 113);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
@@ -588,34 +589,37 @@
             // 
             this.btnPmrelOff.BackColor = System.Drawing.Color.Salmon;
             this.btnPmrelOff.Location = new System.Drawing.Point(147, 16);
-            this.btnPmrelOff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPmrelOff.Margin = new System.Windows.Forms.Padding(4);
             this.btnPmrelOff.Name = "btnPmrelOff";
             this.btnPmrelOff.Size = new System.Drawing.Size(113, 86);
             this.btnPmrelOff.TabIndex = 0;
             this.btnPmrelOff.Text = "OFF";
             this.btnPmrelOff.UseVisualStyleBackColor = false;
+            this.btnPmrelOff.Click += new System.EventHandler(this.btnPmrelOff_Click);
             // 
             // btnPDeployment
             // 
             this.btnPDeployment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnPDeployment.Location = new System.Drawing.Point(9, 63);
-            this.btnPDeployment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPDeployment.Margin = new System.Windows.Forms.Padding(4);
             this.btnPDeployment.Name = "btnPDeployment";
             this.btnPDeployment.Size = new System.Drawing.Size(131, 37);
             this.btnPDeployment.TabIndex = 0;
             this.btnPDeployment.Text = "P.Deployment";
             this.btnPDeployment.UseVisualStyleBackColor = false;
+            this.btnPDeployment.Click += new System.EventHandler(this.btnPDeployment_Click);
             // 
             // btnTPRelease
             // 
             this.btnTPRelease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTPRelease.Location = new System.Drawing.Point(8, 18);
-            this.btnTPRelease.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTPRelease.Margin = new System.Windows.Forms.Padding(4);
             this.btnTPRelease.Name = "btnTPRelease";
             this.btnTPRelease.Size = new System.Drawing.Size(131, 37);
             this.btnTPRelease.TabIndex = 0;
             this.btnTPRelease.Text = "T. Release";
             this.btnTPRelease.UseVisualStyleBackColor = false;
+            this.btnTPRelease.Click += new System.EventHandler(this.btnTPRelease_Click);
             // 
             // groupBox4
             // 
@@ -623,9 +627,9 @@
             this.groupBox4.Controls.Add(this.btniMuSet);
             this.groupBox4.Controls.Add(this.btnSglpSet);
             this.groupBox4.Location = new System.Drawing.Point(8, 432);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(267, 96);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
@@ -635,54 +639,57 @@
             // 
             this.btnSetTime.BackColor = System.Drawing.Color.LightSalmon;
             this.btnSetTime.Location = new System.Drawing.Point(112, 23);
-            this.btnSetTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSetTime.Margin = new System.Windows.Forms.Padding(4);
             this.btnSetTime.Name = "btnSetTime";
             this.btnSetTime.Size = new System.Drawing.Size(139, 64);
             this.btnSetTime.TabIndex = 0;
             this.btnSetTime.Text = "SET TIME";
             this.btnSetTime.UseVisualStyleBackColor = false;
+            this.btnSetTime.Click += new System.EventHandler(this.btnSetTime_Click);
             // 
             // btniMuSet
             // 
             this.btniMuSet.BackColor = System.Drawing.Color.LightSalmon;
             this.btniMuSet.Location = new System.Drawing.Point(13, 59);
-            this.btniMuSet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btniMuSet.Margin = new System.Windows.Forms.Padding(4);
             this.btniMuSet.Name = "btniMuSet";
             this.btniMuSet.Size = new System.Drawing.Size(93, 28);
             this.btniMuSet.TabIndex = 0;
             this.btniMuSet.Text = "IMU SET";
             this.btniMuSet.UseVisualStyleBackColor = false;
+            this.btniMuSet.Click += new System.EventHandler(this.btniMuSet_Click);
             // 
             // btnSglpSet
             // 
             this.btnSglpSet.BackColor = System.Drawing.Color.LightSalmon;
             this.btnSglpSet.Location = new System.Drawing.Point(13, 23);
-            this.btnSglpSet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSglpSet.Margin = new System.Windows.Forms.Padding(4);
             this.btnSglpSet.Name = "btnSglpSet";
             this.btnSglpSet.Size = new System.Drawing.Size(93, 28);
             this.btnSglpSet.TabIndex = 0;
             this.btnSglpSet.Text = "SGLP SET";
             this.btnSglpSet.UseVisualStyleBackColor = false;
+            this.btnSglpSet.Click += new System.EventHandler(this.btnSglpSet_Click);
             // 
-            // groupBox3
+            // grbBoxCsvSave
             // 
-            this.groupBox3.Controls.Add(this.txtBoxContainerCsv);
-            this.groupBox3.Controls.Add(this.btnCsvSaveToStop);
-            this.groupBox3.Controls.Add(this.btnCsvSave);
-            this.groupBox3.Controls.Add(this.txtBoxTetherPayloadCsv);
-            this.groupBox3.Location = new System.Drawing.Point(8, 283);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(267, 142);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "csv T.Payload";
+            this.grbBoxCsvSave.Controls.Add(this.txtBoxContainerCsv);
+            this.grbBoxCsvSave.Controls.Add(this.btnCsvSaveToStop);
+            this.grbBoxCsvSave.Controls.Add(this.btnCsvSave);
+            this.grbBoxCsvSave.Controls.Add(this.txtBoxTetherPayloadCsv);
+            this.grbBoxCsvSave.Location = new System.Drawing.Point(8, 283);
+            this.grbBoxCsvSave.Margin = new System.Windows.Forms.Padding(4);
+            this.grbBoxCsvSave.Name = "grbBoxCsvSave";
+            this.grbBoxCsvSave.Padding = new System.Windows.Forms.Padding(4);
+            this.grbBoxCsvSave.Size = new System.Drawing.Size(267, 142);
+            this.grbBoxCsvSave.TabIndex = 3;
+            this.grbBoxCsvSave.TabStop = false;
+            this.grbBoxCsvSave.Text = "csv T.Payload";
             // 
             // txtBoxContainerCsv
             // 
             this.txtBoxContainerCsv.Location = new System.Drawing.Point(8, 23);
-            this.txtBoxContainerCsv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxContainerCsv.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxContainerCsv.Name = "txtBoxContainerCsv";
             this.txtBoxContainerCsv.Size = new System.Drawing.Size(247, 22);
             this.txtBoxContainerCsv.TabIndex = 1;
@@ -693,28 +700,30 @@
             // 
             this.btnCsvSaveToStop.BackColor = System.Drawing.Color.Salmon;
             this.btnCsvSaveToStop.Location = new System.Drawing.Point(145, 87);
-            this.btnCsvSaveToStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCsvSaveToStop.Margin = new System.Windows.Forms.Padding(4);
             this.btnCsvSaveToStop.Name = "btnCsvSaveToStop";
             this.btnCsvSaveToStop.Size = new System.Drawing.Size(93, 47);
             this.btnCsvSaveToStop.TabIndex = 2;
             this.btnCsvSaveToStop.Text = "STOP";
             this.btnCsvSaveToStop.UseVisualStyleBackColor = false;
+            this.btnCsvSaveToStop.Click += new System.EventHandler(this.btnCsvSaveToStop_Click);
             // 
             // btnCsvSave
             // 
             this.btnCsvSave.BackColor = System.Drawing.Color.LightSalmon;
             this.btnCsvSave.Location = new System.Drawing.Point(20, 87);
-            this.btnCsvSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCsvSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnCsvSave.Name = "btnCsvSave";
             this.btnCsvSave.Size = new System.Drawing.Size(93, 47);
             this.btnCsvSave.TabIndex = 3;
             this.btnCsvSave.Text = "SAVE";
             this.btnCsvSave.UseVisualStyleBackColor = false;
+            this.btnCsvSave.Click += new System.EventHandler(this.btnCsvSave_Click);
             // 
             // txtBoxTetherPayloadCsv
             // 
             this.txtBoxTetherPayloadCsv.Location = new System.Drawing.Point(8, 55);
-            this.txtBoxTetherPayloadCsv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxTetherPayloadCsv.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxTetherPayloadCsv.Name = "txtBoxTetherPayloadCsv";
             this.txtBoxTetherPayloadCsv.Size = new System.Drawing.Size(247, 22);
             this.txtBoxTetherPayloadCsv.TabIndex = 0;
@@ -730,9 +739,9 @@
             this.groupBox2.Controls.Add(this.txtBoxSimModeCsv);
             this.groupBox2.Controls.Add(this.btnSimModeActive);
             this.groupBox2.Location = new System.Drawing.Point(9, 146);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(267, 129);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -741,7 +750,7 @@
             // txtBoxSimpMode
             // 
             this.txtBoxSimpMode.Location = new System.Drawing.Point(7, 92);
-            this.txtBoxSimpMode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxSimpMode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxSimpMode.Name = "txtBoxSimpMode";
             this.txtBoxSimpMode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBoxSimpMode.Size = new System.Drawing.Size(80, 22);
@@ -753,41 +762,44 @@
             // 
             this.btnSimModeDisable.BackColor = System.Drawing.Color.Salmon;
             this.btnSimModeDisable.Location = new System.Drawing.Point(176, 14);
-            this.btnSimModeDisable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimModeDisable.Margin = new System.Windows.Forms.Padding(4);
             this.btnSimModeDisable.Name = "btnSimModeDisable";
             this.btnSimModeDisable.Size = new System.Drawing.Size(83, 63);
             this.btnSimModeDisable.TabIndex = 0;
             this.btnSimModeDisable.Text = "DİSABLE";
             this.btnSimModeDisable.UseVisualStyleBackColor = false;
+            this.btnSimModeDisable.Click += new System.EventHandler(this.btnSimModeDisable_Click);
             // 
             // btnSimpModeEnter
             // 
             this.btnSimpModeEnter.BackColor = System.Drawing.Color.LightSalmon;
             this.btnSimpModeEnter.Location = new System.Drawing.Point(96, 87);
-            this.btnSimpModeEnter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimpModeEnter.Margin = new System.Windows.Forms.Padding(4);
             this.btnSimpModeEnter.Name = "btnSimpModeEnter";
             this.btnSimpModeEnter.Size = new System.Drawing.Size(163, 32);
             this.btnSimpModeEnter.TabIndex = 0;
             this.btnSimpModeEnter.Text = "ENTER";
             this.btnSimpModeEnter.UseVisualStyleBackColor = false;
+            this.btnSimpModeEnter.Click += new System.EventHandler(this.btnSimpModeEnter_Click);
             // 
             // btnSimModeEnable
             // 
             this.btnSimModeEnable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSimModeEnable.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSimModeEnable.Location = new System.Drawing.Point(87, 48);
-            this.btnSimModeEnable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimModeEnable.Margin = new System.Windows.Forms.Padding(4);
             this.btnSimModeEnable.Name = "btnSimModeEnable";
             this.btnSimModeEnable.Size = new System.Drawing.Size(81, 37);
             this.btnSimModeEnable.TabIndex = 0;
             this.btnSimModeEnable.Text = "ENABLE";
             this.btnSimModeEnable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSimModeEnable.UseVisualStyleBackColor = false;
+            this.btnSimModeEnable.Click += new System.EventHandler(this.btnSimModeEnable_Click);
             // 
             // txtBoxSimModeCsv
             // 
             this.txtBoxSimModeCsv.Location = new System.Drawing.Point(8, 21);
-            this.txtBoxSimModeCsv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxSimModeCsv.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxSimModeCsv.Name = "txtBoxSimModeCsv";
             this.txtBoxSimModeCsv.Size = new System.Drawing.Size(159, 22);
             this.txtBoxSimModeCsv.TabIndex = 0;
@@ -798,21 +810,22 @@
             // 
             this.btnSimModeActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSimModeActive.Location = new System.Drawing.Point(7, 48);
-            this.btnSimModeActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimModeActive.Margin = new System.Windows.Forms.Padding(4);
             this.btnSimModeActive.Name = "btnSimModeActive";
             this.btnSimModeActive.Size = new System.Drawing.Size(72, 37);
             this.btnSimModeActive.TabIndex = 0;
             this.btnSimModeActive.Text = "ACTİVE";
             this.btnSimModeActive.UseVisualStyleBackColor = false;
+            this.btnSimModeActive.Click += new System.EventHandler(this.btnSimModeActive_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnCxOff);
             this.groupBox1.Controls.Add(this.btnCxOn);
             this.groupBox1.Location = new System.Drawing.Point(8, 75);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(267, 64);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -822,7 +835,7 @@
             // 
             this.btnCxOff.BackColor = System.Drawing.Color.Salmon;
             this.btnCxOff.Location = new System.Drawing.Point(136, 21);
-            this.btnCxOff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCxOff.Margin = new System.Windows.Forms.Padding(4);
             this.btnCxOff.Name = "btnCxOff";
             this.btnCxOff.Size = new System.Drawing.Size(123, 36);
             this.btnCxOff.TabIndex = 0;
@@ -834,7 +847,7 @@
             // 
             this.btnCxOn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCxOn.Location = new System.Drawing.Point(11, 21);
-            this.btnCxOn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCxOn.Margin = new System.Windows.Forms.Padding(4);
             this.btnCxOn.Name = "btnCxOn";
             this.btnCxOn.Size = new System.Drawing.Size(103, 36);
             this.btnCxOn.TabIndex = 0;
@@ -847,9 +860,9 @@
             this.grbBoxSerialConnect.Controls.Add(this.btnSerialConnect);
             this.grbBoxSerialConnect.Controls.Add(this.cmbBoxPort);
             this.grbBoxSerialConnect.Location = new System.Drawing.Point(9, 9);
-            this.grbBoxSerialConnect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbBoxSerialConnect.Margin = new System.Windows.Forms.Padding(4);
             this.grbBoxSerialConnect.Name = "grbBoxSerialConnect";
-            this.grbBoxSerialConnect.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbBoxSerialConnect.Padding = new System.Windows.Forms.Padding(4);
             this.grbBoxSerialConnect.Size = new System.Drawing.Size(265, 59);
             this.grbBoxSerialConnect.TabIndex = 0;
             this.grbBoxSerialConnect.TabStop = false;
@@ -859,7 +872,7 @@
             // 
             this.btnSerialConnect.BackColor = System.Drawing.Color.Red;
             this.btnSerialConnect.Location = new System.Drawing.Point(120, 15);
-            this.btnSerialConnect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSerialConnect.Margin = new System.Windows.Forms.Padding(4);
             this.btnSerialConnect.Name = "btnSerialConnect";
             this.btnSerialConnect.Size = new System.Drawing.Size(117, 37);
             this.btnSerialConnect.TabIndex = 1;
@@ -873,7 +886,7 @@
             this.cmbBoxPort.Items.AddRange(new object[] {
             "COM3"});
             this.cmbBoxPort.Location = new System.Drawing.Point(19, 22);
-            this.cmbBoxPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbBoxPort.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBoxPort.Name = "cmbBoxPort";
             this.cmbBoxPort.Size = new System.Drawing.Size(92, 24);
             this.cmbBoxPort.TabIndex = 0;
@@ -882,9 +895,9 @@
             // 
             this.tabPage2.Controls.Add(this.richTxtBoxConTelemetri);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1416, 809);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Container Telemetry";
@@ -894,7 +907,7 @@
             // 
             this.richTxtBoxConTelemetri.EnableAutoDragDrop = true;
             this.richTxtBoxConTelemetri.Location = new System.Drawing.Point(9, 52);
-            this.richTxtBoxConTelemetri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTxtBoxConTelemetri.Margin = new System.Windows.Forms.Padding(4);
             this.richTxtBoxConTelemetri.Name = "richTxtBoxConTelemetri";
             this.richTxtBoxConTelemetri.ReadOnly = true;
             this.richTxtBoxConTelemetri.Size = new System.Drawing.Size(1305, 704);
@@ -905,7 +918,7 @@
             // 
             this.tabPage3.Controls.Add(this.richTxtBoxTPayloadTelemetri);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1416, 809);
             this.tabPage3.TabIndex = 2;
@@ -915,7 +928,7 @@
             // richTxtBoxTPayloadTelemetri
             // 
             this.richTxtBoxTPayloadTelemetri.Location = new System.Drawing.Point(23, 52);
-            this.richTxtBoxTPayloadTelemetri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTxtBoxTPayloadTelemetri.Margin = new System.Windows.Forms.Padding(4);
             this.richTxtBoxTPayloadTelemetri.Name = "richTxtBoxTPayloadTelemetri";
             this.richTxtBoxTPayloadTelemetri.ReadOnly = true;
             this.richTxtBoxTPayloadTelemetri.Size = new System.Drawing.Size(1305, 704);
@@ -932,12 +945,22 @@
             this.tabPage4.Controls.Add(this.lblHata);
             this.tabPage4.Controls.Add(this.lblGelenVeri);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1416, 809);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "extra";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(438, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 43);
+            this.button1.TabIndex = 62;
+            this.button1.Text = "restart";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblShortTime
             // 
@@ -962,7 +985,7 @@
             // richTxtBoxGelenVeri
             // 
             this.richTxtBoxGelenVeri.Location = new System.Drawing.Point(24, 386);
-            this.richTxtBoxGelenVeri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTxtBoxGelenVeri.Margin = new System.Windows.Forms.Padding(4);
             this.richTxtBoxGelenVeri.Name = "richTxtBoxGelenVeri";
             this.richTxtBoxGelenVeri.Size = new System.Drawing.Size(1328, 349);
             this.richTxtBoxGelenVeri.TabIndex = 59;
@@ -1009,7 +1032,7 @@
             this.tabPage5.Controls.Add(this.TxtboxMqttlServerName);
             this.tabPage5.Controls.Add(this.LabelMqttlServerName);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1416, 809);
             this.tabPage5.TabIndex = 4;
@@ -1019,7 +1042,7 @@
             // TextboxMqttUserPassword
             // 
             this.TextboxMqttUserPassword.Location = new System.Drawing.Point(171, 137);
-            this.TextboxMqttUserPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextboxMqttUserPassword.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxMqttUserPassword.Name = "TextboxMqttUserPassword";
             this.TextboxMqttUserPassword.Size = new System.Drawing.Size(133, 22);
             this.TextboxMqttUserPassword.TabIndex = 7;
@@ -1038,7 +1061,7 @@
             // TextboxMqttTopic
             // 
             this.TextboxMqttTopic.Location = new System.Drawing.Point(171, 105);
-            this.TextboxMqttTopic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextboxMqttTopic.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxMqttTopic.Name = "TextboxMqttTopic";
             this.TextboxMqttTopic.Size = new System.Drawing.Size(133, 22);
             this.TextboxMqttTopic.TabIndex = 5;
@@ -1057,7 +1080,7 @@
             // TxtboxMqttUserName
             // 
             this.TxtboxMqttUserName.Location = new System.Drawing.Point(171, 65);
-            this.TxtboxMqttUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtboxMqttUserName.Margin = new System.Windows.Forms.Padding(4);
             this.TxtboxMqttUserName.Name = "TxtboxMqttUserName";
             this.TxtboxMqttUserName.Size = new System.Drawing.Size(133, 22);
             this.TxtboxMqttUserName.TabIndex = 3;
@@ -1076,7 +1099,7 @@
             // TxtboxMqttlServerName
             // 
             this.TxtboxMqttlServerName.Location = new System.Drawing.Point(171, 26);
-            this.TxtboxMqttlServerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtboxMqttlServerName.Margin = new System.Windows.Forms.Padding(4);
             this.TxtboxMqttlServerName.Name = "TxtboxMqttlServerName";
             this.TxtboxMqttlServerName.Size = new System.Drawing.Size(133, 22);
             this.TxtboxMqttlServerName.TabIndex = 1;
@@ -1451,9 +1474,9 @@
             this.groupBox7.Controls.Add(this.label45);
             this.groupBox7.Controls.Add(this.lblCCmdEcho);
             this.groupBox7.Location = new System.Drawing.Point(1440, 10);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(267, 375);
             this.groupBox7.TabIndex = 57;
             this.groupBox7.TabStop = false;
@@ -1498,9 +1521,9 @@
             this.groupBox8.Controls.Add(this.lblPMissionTime);
             this.groupBox8.Controls.Add(this.lblPTeamid);
             this.groupBox8.Location = new System.Drawing.Point(1440, 393);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox8.Size = new System.Drawing.Size(267, 330);
             this.groupBox8.TabIndex = 58;
             this.groupBox8.TabStop = false;
@@ -1876,15 +1899,9 @@
             this.timerVeriYazdir.Interval = 200;
             this.timerVeriYazdir.Tick += new System.EventHandler(this.timerVeriYazdir_Tick);
             // 
-            // button1
+            // timerCsvSave
             // 
-            this.button1.Location = new System.Drawing.Point(438, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 43);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "restart";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.timerCsvSave.Tick += new System.EventHandler(this.timerCsvSave_Tick);
             // 
             // Form1
             // 
@@ -1923,8 +1940,8 @@
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.grbBoxCsvSave.ResumeLayout(false);
+            this.grbBoxCsvSave.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1969,7 +1986,7 @@
         private System.Windows.Forms.Button btnSetTime;
         private System.Windows.Forms.Button btniMuSet;
         private System.Windows.Forms.Button btnSglpSet;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grbBoxCsvSave;
         private System.Windows.Forms.TextBox txtBoxContainerCsv;
         private System.Windows.Forms.Button btnCsvSaveToStop;
         private System.Windows.Forms.Button btnCsvSave;
@@ -2087,6 +2104,7 @@
         private System.Windows.Forms.Label lblShortTime;
         private System.Windows.Forms.Label lblLongtime;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timerCsvSave;
     }
 }
 
