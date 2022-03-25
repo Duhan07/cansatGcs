@@ -321,6 +321,16 @@ namespace CansatGCS
         {
             timerSerialPort.Enabled = false;
             timerVeriYazdir.Stop();
+
+            if (timerCsvSave.Enabled == true)
+            {
+                btnCsvSaveToStop_Click(sender, e);
+            }
+
+            if (timerMqttCsvSave.Enabled == true)
+            {
+                btnMqttStop_Click(sender, e);
+            }
         }
 
        
@@ -412,11 +422,7 @@ namespace CansatGCS
 
         }
 
-        private void btnCsvSaveToStop_Click(object sender, EventArgs e)
-        {
-            timerCsvSave.Stop();
-            grbBoxCsvSave.BackColor = Color.Red;
-        }
+        
 
         List<string> csv_datas = new List<string>();
         string C_csvPath, T_csvPath;
@@ -448,15 +454,31 @@ namespace CansatGCS
 
         private void btnCsvSave_Click(object sender, EventArgs e)
         {
-          
-            // Save csv files
-            grbBoxCsvSave.BackColor = Color.Green;
-            timerCsvSave.Start();
 
-            //btn
+            // Save csv files
+            if (serialPort1.IsOpen)
+            {
+                grbBoxCsvSave.BackColor = Color.Green;
+                timerCsvSave.Start();
+
+                btnCsvSave.Enabled = false;
+                btnCsvSaveToStop.Enabled = true;
+            }
         }
 
-       
+        private void btnCsvSaveToStop_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                timerCsvSave.Stop();
+                grbBoxCsvSave.BackColor = Color.Red;
+
+                btnCsvSaveToStop.Enabled = false;
+                btnCsvSave.Enabled = true;
+            }
+        }
+
+
         private void btnCsvSil_Click_1(object sender, EventArgs e)
         {
             csvSil();
@@ -476,13 +498,49 @@ namespace CansatGCS
         {
 
             if (serialPort1.IsOpen)
-            { serialPort1.Write("CMD,1084,PMREL,OFFT"); }
+            { 
+                serialPort1.Write("CMD,1084,PMREL,OFFT"); 
+            }
+        }
+
+        string mqtt_csv;
+
+        private void timerMqttCsvSave_Tick(object sender, EventArgs e)
+        {
+            mqtt_csv = Path.Combine(Environment.CurrentDirectory, txtBoxMqttCsv.Text);
+
+            using (StreamWriter file = new StreamWriter(mqtt_csv, true))
+            {
+                file.Write(lblGelenVeri.Text);
+            }
         }
 
         private void btnMqttStart_Click(object sender, EventArgs e)
         {
+            // Start Saving MQTT Csv File
+            if (serialPort1.IsOpen)
+            {
+                grbBoxMqttCsvSave.BackColor = Color.Green;
+                timerMqttCsvSave.Start();
 
+                btnMqttStart.Enabled = false;
+                btnMqttStop.Enabled = true;
+            }
         }
+
+        private void btnMqttStop_Click(object sender, EventArgs e)
+        {
+            // Stop Saving MQTT Csv File
+            if (serialPort1.IsOpen)
+            {
+                timerMqttCsvSave.Stop();
+                grbBoxMqttCsvSave.BackColor = Color.Red;
+
+                btnMqttStart.Enabled = true;
+                btnMqttStop.Enabled = false;
+            }
+        }
+
 
         void csvSil()
         {
