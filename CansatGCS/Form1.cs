@@ -19,7 +19,7 @@ namespace CansatGCS
 {
     public partial class Form1 : Form
     {
-        // yG
+        // yGs
         public Form1()
         {
             InitializeComponent();
