@@ -40,3 +40,14 @@ C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.csproj.Gener
 C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.csproj.CoreCompileInputs.cache
 C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.exe
 C:\Users\yns3g\Desktop\cansatGcs-main\CansatGCS\obj\Debug\CansatGCS.pdb
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\bin\Debug\CansatGCS.exe.config
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\bin\Debug\CansatGCS.exe
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\bin\Debug\CansatGCS.pdb
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.AssemblyReference.cache
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.SuggestedBindingRedirects.cache
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\obj\Debug\CansatGCS.Form1.resources
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\obj\Debug\CansatGCS.Properties.Resources.resources
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.GenerateResource.cache
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.CoreCompileInputs.cache
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\obj\Debug\CansatGCS.exe
+C:\Users\yns3g\Documents\GitHub\cansatGcs\CansatGCS\obj\Debug\CansatGCS.pdb

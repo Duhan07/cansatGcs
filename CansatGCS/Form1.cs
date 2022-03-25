@@ -5,11 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Ports;
-using System.Threading;
 using System.Windows.Forms;
 using System.Net;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -39,9 +37,53 @@ namespace CansatGCS
             cmbBoxPort.SelectedIndex = 0;
             serialPort1.Encoding = UTF8Encoding.UTF8;
              COMPortlariListele();
+            listWievPayloadTelemetry.View = View.Details;
+            listWievPayloadTelemetry.Columns.Add("Teamid");
+            listWievPayloadTelemetry.Columns.Add("MissionTime");
+            listWievPayloadTelemetry.Columns.Add("PacketCount");
+            listWievPayloadTelemetry.Columns.Add("PacketType");
+            listWievPayloadTelemetry.Columns.Add("TPAltitude");
+            listWievPayloadTelemetry.Columns.Add("TPTemperature");
+            listWievPayloadTelemetry.Columns.Add("TPVoltage");
+            listWievPayloadTelemetry.Columns.Add("GyroR");
+            listWievPayloadTelemetry.Columns.Add("GyroP");
+            listWievPayloadTelemetry.Columns.Add("GyroY");
+            listWievPayloadTelemetry.Columns.Add("AccelR");
+            listWievPayloadTelemetry.Columns.Add("AccelP");
+            listWievPayloadTelemetry.Columns.Add("AccelY");
+            listWievPayloadTelemetry.Columns.Add("MagR");
+            listWievPayloadTelemetry.Columns.Add("MagP");
+            listWievPayloadTelemetry.Columns.Add("MagY");
+            listWievPayloadTelemetry.Columns.Add("PointingErr");
+            listWievPayloadTelemetry.Columns.Add("TPSoftState");
+
+            listWievContainerTelemetry.View = View.Details;
+            listWievContainerTelemetry.Columns.Add("Teamid");
+            listWievContainerTelemetry.Columns.Add("MissionTime");
+            listWievContainerTelemetry.Columns.Add("PacketCount");
+            listWievContainerTelemetry.Columns.Add("PacketType");
+            listWievContainerTelemetry.Columns.Add("Mode");
+            listWievContainerTelemetry.Columns.Add("TPReleased");
+            listWievContainerTelemetry.Columns.Add("Altitude");
+            listWievContainerTelemetry.Columns.Add("Temp");
+            listWievContainerTelemetry.Columns.Add("Voltage");
+            listWievContainerTelemetry.Columns.Add("GpsTime");
+            listWievContainerTelemetry.Columns.Add("GpsLatitude");
+            listWievContainerTelemetry.Columns.Add("GpsLongtitude");
+            listWievContainerTelemetry.Columns.Add("GpsAltitude");
+            listWievContainerTelemetry.Columns.Add("GpsStats");
+            listWievContainerTelemetry.Columns.Add("SoftwareState");
+            listWievContainerTelemetry.Columns.Add("CmdEcho");
+         
+
+
+
+           
+
+            
         }
 
-       
+
 
 
         private void btnSerialConnect_Click(object sender, EventArgs e)
@@ -105,23 +147,24 @@ namespace CansatGCS
             }
             else
             {
-                lblGelenVeri.Text = veri;
+              
 
+              
+                serialPort1.Encoding = UTF8Encoding.UTF8;
+                gelenVerilerimiz = veri.Split(',');
+                sayac = gelenVerilerimiz.Length;
                 if (veri.Contains("1084"))
                 {
-                    richTxtBoxConTelemetri.Text += lblGelenVeri.Text;
+                    listWievContainerTelemetry.Items.Add(new ListViewItem(gelenVerilerimiz));
                 }
                 else if (veri.Contains("6084"))
                 {
-                    richTxtBoxTPayloadTelemetri.Text += lblGelenVeri.Text;
+                    listWievPayloadTelemetry.Items.Add(new ListViewItem(gelenVerilerimiz));
                 }
                 else
                 {
                     lblHata.Text = "Ayrıstırma !!";
                 }
-                serialPort1.Encoding = UTF8Encoding.UTF8;
-                gelenVerilerimiz = veri.Split(',');
-                sayac = gelenVerilerimiz.Length;
                 if (sayac == 16 && veri.Contains("1084"))
                 {
 
@@ -179,24 +222,37 @@ namespace CansatGCS
             this.chartC_Temp.Series["C_Temp"].Points.AddXY(lblLongtime.Text, lblCTemp.Text);
             this.chartC_Volt.Series["C_Volt"].Points.AddXY(lblLongtime.Text, lblCVoltage.Text);
             this.chartTP_Alt.Series["TP_Alt"].Points.AddXY(lblLongtime.Text, lblPTPAltitude.Text);
+            graphLblC_Alt.Text =""+ lblCAltitude.Text+" (m)";
+            graphLblC_Temp.Text = lblCTemp.Text+" (C)";
+            graphLblC_Volt.Text = lblCVoltage.Text+" (V)";
+            graphLblTP_Alt.Text = lblPTPAltitude.Text+" (m)";
 
             this.chartTP_Volt.Series["TP_Volt"].Points.AddXY(lblLongtime.Text, lblPTPVoltage.Text);
             this.chartTP_Gyro_Y.Series["TP_Gyro_Y"].Points.AddXY(lblLongtime.Text, lblPGyroY.Text);
             this.chartTP_Gyro_P.Series["TP_Gyro_P"].Points.AddXY(lblLongtime.Text, lblPGyroP.Text);
             this.chartTP_Gyro_R.Series["TP_Gyro_R"].Points.AddXY(lblLongtime.Text, lblPGyroR.Text);
-
+            graphLblTP_Volt.Text = lblPTPVoltage.Text + " (V)";
+            graphLblTP_Gyro_Y.Text = lblPGyroY.Text;
+            graphLblTP_Gyro_P.Text = lblPGyroP.Text;
+            graphLblTP_Gyro_R.Text = lblPGyroR.Text;
 
             this.chartTP_Mag_Y.Series["TP_Mag_Y"].Points.AddXY(lblLongtime.Text, lblPMagY.Text);
             this.chartTP_Mag_P.Series["TP_Mag_P"].Points.AddXY(lblLongtime.Text, lblPMagP.Text);
             this.chartTP_Mag_R.Series["TP_Mag_R"].Points.AddXY(lblLongtime.Text, lblPMagR.Text);
             this.chartTP_Point_Err.Series["TP_Point_Err"].Points.AddXY(lblLongtime.Text, lblPPointingErr.Text);
-
+            graphLblTP_Mag_Y.Text = lblPMagY.Text;
+            graphLblTP_Mag_P.Text = lblPMagP.Text;
+            graphLblTP_Mag_R.Text = lblPMagR.Text;
+            graphLblTP_Point_Err.Text = lblPPointingErr.Text;
 
             this.chartTP_Accel_Y.Series["TP_Accel_Y"].Points.AddXY(lblLongtime.Text, lblPAccelY.Text);
             this.chartTP_Accel_P.Series["TP_Accel_P"].Points.AddXY(lblLongtime.Text, lblPAccelP.Text);
             this.chartTP_Accel_R.Series["TP_Accel_R"].Points.AddXY(lblLongtime.Text, lblPAccelR.Text);
             this.chartTP_Temp.Series["TP_Temp"].Points.AddXY(lblLongtime.Text, lblPTPTemperature.Text);
-
+            graphLblTP_Accel_Y.Text = lblPAccelY.Text;
+            graphLblTP_Accel_P.Text = lblPAccelP.Text;
+            graphLblTP_Accel_R.Text = lblPAccelR.Text;
+            graphLblTP_Temp.Text = lblPTPTemperature.Text+" (C)";
         }
 
         private void timerSerialPort_Tick(object sender, EventArgs e)
@@ -208,7 +264,7 @@ namespace CansatGCS
                 if (serialPort1.BytesToRead > 0)
                 {
 
-                    GelenVerileriGuncelle(serialPort1.ReadExisting());
+                    GelenVerileriGuncelle(serialPort1.ReadLine());
                   
                   
                     serialPort1.Encoding = UTF8Encoding.UTF8;
@@ -344,9 +400,10 @@ namespace CansatGCS
             // PMREL - Parachute Deployment
 
             if (serialPort1.IsOpen)
-            { /* ???*/ }
-           
+            { /* ???*/
         }
+
+    }
 
         private void btnCsvSaveToStop_Click(object sender, EventArgs e)
         {
@@ -399,6 +456,11 @@ namespace CansatGCS
         private void btnRestart_Click(object sender, EventArgs e)
         {
             Application.Restart();  // butona koyunca istasyonu yeniden baslatabiliyoruz.
+        }
+
+        private void graphLblTP_Gyro_R_Click(object sender, EventArgs e)
+        {
+
         }
 
         void csvSil()
