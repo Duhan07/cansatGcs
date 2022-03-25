@@ -14,7 +14,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 //yyyyyaaasss
 
-
+// Deneme Git Duhan
 namespace CansatGCS
 {
     public partial class Form1 : Form
@@ -297,15 +297,13 @@ namespace CansatGCS
           
             if(lblGelenVeri.Text != "lblGelenVeri")
             {
-            richTxtBoxGelenVeri.Text += lblGelenVeri.Text;
-
+                richTxtBoxGelenVeri.Text += lblGelenVeri.Text;
             }
             
             lblLongtime.Text = DateTime.Now.ToLongTimeString();
             lblShortTime.Text = DateTime.Now.ToShortDateString();
             if (serialPort1.IsOpen)
             {
-
                 grafikGoster();
             }
 
@@ -454,12 +452,14 @@ namespace CansatGCS
             // Save csv files
             grbBoxCsvSave.BackColor = Color.Green;
             timerCsvSave.Start();
+
+            //btn
         }
 
        
         private void btnCsvSil_Click_1(object sender, EventArgs e)
         {
-                    csvSil();
+            csvSil();
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
@@ -477,7 +477,12 @@ namespace CansatGCS
 
             if (serialPort1.IsOpen)
             { serialPort1.Write("CMD,1084,PMREL,OFFT"); }
-        }   
+        }
+
+        private void btnMqttStart_Click(object sender, EventArgs e)
+        {
+
+        }
 
         void csvSil()
         {
