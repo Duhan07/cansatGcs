@@ -113,6 +113,8 @@ namespace CansatGCS
                     lblHata.Text = "İstasyonla bağlantı kuruldu !";
                     lblHata.BackColor = System.Drawing.Color.LightGreen;
 
+                    timerSerialPort.Enabled = false;
+                    timerVeriYazdir.Stop();
 
                 }
                 else
@@ -382,7 +384,7 @@ namespace CansatGCS
         {
             // PMREL - ON
             if (serialPort1.IsOpen)
-            {  serialPort1.Write("CMD,1084,PMREL,ON1");}
+            {  serialPort1.Write("CMD,1084,PMREL,ONT");}
            
         }
 
@@ -391,7 +393,7 @@ namespace CansatGCS
             // PMREL - OFF
 
             if (serialPort1.IsOpen)
-            {  serialPort1.Write("CMD,1084,PMREL,OFF");}
+            {  serialPort1.Write("CMD,1084,PMREL,OFFT");}
            
         }
 
@@ -400,10 +402,9 @@ namespace CansatGCS
             // PMREL - Parachute Deployment
 
             if (serialPort1.IsOpen)
-            { /* ???*/
-        }
+            { serialPort1.Write("CMD,1084,PMREL,ONP"); }
 
-    }
+        }
 
         private void btnCsvSaveToStop_Click(object sender, EventArgs e)
         {
@@ -461,6 +462,13 @@ namespace CansatGCS
         private void graphLblTP_Gyro_R_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPmrelOffP_Click(object sender, EventArgs e)
+        {
+
+            if (serialPort1.IsOpen)
+            { serialPort1.Write("CMD,1084,PMREL,OFFT"); }
         }
 
         void csvSil()
