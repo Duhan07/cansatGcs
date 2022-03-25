@@ -155,6 +155,7 @@ namespace CansatGCS
                 serialPort1.Encoding = UTF8Encoding.UTF8;
                 gelenVerilerimiz = veri.Split(',');
                 sayac = gelenVerilerimiz.Length;
+                lblGelenVeri.Text = veri;
                 if (veri.Contains("1084"))
                 {
                     listWievContainerTelemetry.Items.Add(new ListViewItem(gelenVerilerimiz));
@@ -268,10 +269,11 @@ namespace CansatGCS
 
                     GelenVerileriGuncelle(serialPort1.ReadLine());
                   
+
                   
                     serialPort1.Encoding = UTF8Encoding.UTF8;
 
-                   
+              
                 }
 
 
@@ -292,7 +294,13 @@ namespace CansatGCS
         private void timerVeriYazdir_Tick(object sender, EventArgs e)
         {
             this.Text = "KTU UZAY GCS :   " + lblGelenVeri.Text;
+          
+            if(lblGelenVeri.Text != "lblGelenVeri")
+            {
             richTxtBoxGelenVeri.Text += lblGelenVeri.Text;
+
+            }
+            
             lblLongtime.Text = DateTime.Now.ToLongTimeString();
             lblShortTime.Text = DateTime.Now.ToShortDateString();
             if (serialPort1.IsOpen)
@@ -469,7 +477,7 @@ namespace CansatGCS
 
             if (serialPort1.IsOpen)
             { serialPort1.Write("CMD,1084,PMREL,OFFT"); }
-        }
+        }   
 
         void csvSil()
         {

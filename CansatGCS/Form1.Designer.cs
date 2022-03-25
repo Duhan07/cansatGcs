@@ -117,6 +117,7 @@
             this.btnMqttStop = new System.Windows.Forms.Button();
             this.btnMqttStart = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnPmrelOffP = new System.Windows.Forms.Button();
             this.btnPmrelOffT = new System.Windows.Forms.Button();
             this.btnPDeployment = new System.Windows.Forms.Button();
             this.btnTPRelease = new System.Windows.Forms.Button();
@@ -237,7 +238,6 @@
             this.timerCsvSave = new System.Windows.Forms.Timer(this.components);
             this.btnCsvSil = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
-            this.btnPmrelOffP = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartTP_Temp)).BeginInit();
@@ -355,7 +355,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(882, 747);
+            this.label4.Location = new System.Drawing.Point(882, 698);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 69;
@@ -365,7 +365,7 @@
             // 
             this.graphLblTP_Temp.AutoSize = true;
             this.graphLblTP_Temp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Temp.Location = new System.Drawing.Point(942, 748);
+            this.graphLblTP_Temp.Location = new System.Drawing.Point(942, 699);
             this.graphLblTP_Temp.Name = "graphLblTP_Temp";
             this.graphLblTP_Temp.Size = new System.Drawing.Size(54, 13);
             this.graphLblTP_Temp.TabIndex = 69;
@@ -375,7 +375,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(667, 747);
+            this.label3.Location = new System.Drawing.Point(667, 698);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 70;
@@ -385,7 +385,7 @@
             // 
             this.graphLblTP_Accel_R.AutoSize = true;
             this.graphLblTP_Accel_R.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Accel_R.Location = new System.Drawing.Point(743, 747);
+            this.graphLblTP_Accel_R.Location = new System.Drawing.Point(743, 698);
             this.graphLblTP_Accel_R.Name = "graphLblTP_Accel_R";
             this.graphLblTP_Accel_R.Size = new System.Drawing.Size(68, 13);
             this.graphLblTP_Accel_R.TabIndex = 70;
@@ -395,7 +395,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(475, 748);
+            this.label2.Location = new System.Drawing.Point(475, 699);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 71;
@@ -405,7 +405,7 @@
             // 
             this.graphLblTP_Accel_P.AutoSize = true;
             this.graphLblTP_Accel_P.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Accel_P.Location = new System.Drawing.Point(549, 748);
+            this.graphLblTP_Accel_P.Location = new System.Drawing.Point(549, 699);
             this.graphLblTP_Accel_P.Name = "graphLblTP_Accel_P";
             this.graphLblTP_Accel_P.Size = new System.Drawing.Size(67, 13);
             this.graphLblTP_Accel_P.TabIndex = 71;
@@ -415,7 +415,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(259, 745);
+            this.label1.Location = new System.Drawing.Point(259, 696);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 72;
@@ -425,7 +425,7 @@
             // 
             this.graphLblTP_Accel_Y.AutoSize = true;
             this.graphLblTP_Accel_Y.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Accel_Y.Location = new System.Drawing.Point(329, 745);
+            this.graphLblTP_Accel_Y.Location = new System.Drawing.Point(329, 696);
             this.graphLblTP_Accel_Y.Name = "graphLblTP_Accel_Y";
             this.graphLblTP_Accel_Y.Size = new System.Drawing.Size(67, 13);
             this.graphLblTP_Accel_Y.TabIndex = 72;
@@ -435,7 +435,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(868, 562);
+            this.label5.Location = new System.Drawing.Point(868, 532);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 65;
@@ -445,7 +445,7 @@
             // 
             this.graphLblTP_Point_Err.AutoSize = true;
             this.graphLblTP_Point_Err.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Point_Err.Location = new System.Drawing.Point(942, 562);
+            this.graphLblTP_Point_Err.Location = new System.Drawing.Point(942, 532);
             this.graphLblTP_Point_Err.Name = "graphLblTP_Point_Err";
             this.graphLblTP_Point_Err.Size = new System.Drawing.Size(70, 13);
             this.graphLblTP_Point_Err.TabIndex = 65;
@@ -455,7 +455,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(675, 561);
+            this.label6.Location = new System.Drawing.Point(675, 531);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 66;
@@ -465,7 +465,7 @@
             // 
             this.graphLblTP_Mag_R.AutoSize = true;
             this.graphLblTP_Mag_R.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Mag_R.Location = new System.Drawing.Point(742, 560);
+            this.graphLblTP_Mag_R.Location = new System.Drawing.Point(742, 530);
             this.graphLblTP_Mag_R.Name = "graphLblTP_Mag_R";
             this.graphLblTP_Mag_R.Size = new System.Drawing.Size(62, 13);
             this.graphLblTP_Mag_R.TabIndex = 66;
@@ -475,7 +475,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(480, 563);
+            this.label7.Location = new System.Drawing.Point(480, 533);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 67;
@@ -485,7 +485,7 @@
             // 
             this.graphLblTP_Mag_P.AutoSize = true;
             this.graphLblTP_Mag_P.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Mag_P.Location = new System.Drawing.Point(546, 562);
+            this.graphLblTP_Mag_P.Location = new System.Drawing.Point(546, 532);
             this.graphLblTP_Mag_P.Name = "graphLblTP_Mag_P";
             this.graphLblTP_Mag_P.Size = new System.Drawing.Size(61, 13);
             this.graphLblTP_Mag_P.TabIndex = 67;
@@ -495,7 +495,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(281, 564);
+            this.label8.Location = new System.Drawing.Point(281, 534);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 13);
             this.label8.TabIndex = 68;
@@ -505,7 +505,7 @@
             // 
             this.graphLblTP_Mag_Y.AutoSize = true;
             this.graphLblTP_Mag_Y.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Mag_Y.Location = new System.Drawing.Point(344, 564);
+            this.graphLblTP_Mag_Y.Location = new System.Drawing.Point(344, 534);
             this.graphLblTP_Mag_Y.Name = "graphLblTP_Mag_Y";
             this.graphLblTP_Mag_Y.Size = new System.Drawing.Size(61, 13);
             this.graphLblTP_Mag_Y.TabIndex = 68;
@@ -515,7 +515,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label12.Location = new System.Drawing.Point(882, 361);
+            this.label12.Location = new System.Drawing.Point(872, 170);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 13);
             this.label12.TabIndex = 61;
@@ -526,7 +526,7 @@
             // 
             this.graphLblTP_Gyro_R.AutoSize = true;
             this.graphLblTP_Gyro_R.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Gyro_R.Location = new System.Drawing.Point(951, 361);
+            this.graphLblTP_Gyro_R.Location = new System.Drawing.Point(941, 171);
             this.graphLblTP_Gyro_R.Name = "graphLblTP_Gyro_R";
             this.graphLblTP_Gyro_R.Size = new System.Drawing.Size(63, 13);
             this.graphLblTP_Gyro_R.TabIndex = 61;
@@ -537,7 +537,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(675, 361);
+            this.label11.Location = new System.Drawing.Point(674, 168);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 13);
             this.label11.TabIndex = 62;
@@ -547,7 +547,7 @@
             // 
             this.graphLblTP_Gyro_P.AutoSize = true;
             this.graphLblTP_Gyro_P.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Gyro_P.Location = new System.Drawing.Point(743, 361);
+            this.graphLblTP_Gyro_P.Location = new System.Drawing.Point(741, 168);
             this.graphLblTP_Gyro_P.Name = "graphLblTP_Gyro_P";
             this.graphLblTP_Gyro_P.Size = new System.Drawing.Size(62, 13);
             this.graphLblTP_Gyro_P.TabIndex = 62;
@@ -557,7 +557,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label10.Location = new System.Drawing.Point(460, 365);
+            this.label10.Location = new System.Drawing.Point(459, 168);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 13);
             this.label10.TabIndex = 63;
@@ -567,7 +567,7 @@
             // 
             this.graphLblTP_Gyro_Y.AutoSize = true;
             this.graphLblTP_Gyro_Y.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Gyro_Y.Location = new System.Drawing.Point(528, 365);
+            this.graphLblTP_Gyro_Y.Location = new System.Drawing.Point(530, 169);
             this.graphLblTP_Gyro_Y.Name = "graphLblTP_Gyro_Y";
             this.graphLblTP_Gyro_Y.Size = new System.Drawing.Size(62, 13);
             this.graphLblTP_Gyro_Y.TabIndex = 63;
@@ -577,7 +577,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(270, 365);
+            this.label9.Location = new System.Drawing.Point(269, 168);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 64;
@@ -587,7 +587,7 @@
             // 
             this.graphLblTP_Volt.AutoSize = true;
             this.graphLblTP_Volt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Volt.Location = new System.Drawing.Point(321, 365);
+            this.graphLblTP_Volt.Location = new System.Drawing.Point(320, 168);
             this.graphLblTP_Volt.Name = "graphLblTP_Volt";
             this.graphLblTP_Volt.Size = new System.Drawing.Size(45, 13);
             this.graphLblTP_Volt.TabIndex = 64;
@@ -597,7 +597,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label13.Location = new System.Drawing.Point(891, 171);
+            this.label13.Location = new System.Drawing.Point(890, 5);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 13);
             this.label13.TabIndex = 60;
@@ -607,7 +607,7 @@
             // 
             this.graphLblTP_Alt.AutoSize = true;
             this.graphLblTP_Alt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblTP_Alt.Location = new System.Drawing.Point(936, 171);
+            this.graphLblTP_Alt.Location = new System.Drawing.Point(935, 5);
             this.graphLblTP_Alt.Name = "graphLblTP_Alt";
             this.graphLblTP_Alt.Size = new System.Drawing.Size(39, 13);
             this.graphLblTP_Alt.TabIndex = 60;
@@ -617,7 +617,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label14.Location = new System.Drawing.Point(675, 171);
+            this.label14.Location = new System.Drawing.Point(674, 5);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 13);
             this.label14.TabIndex = 60;
@@ -627,7 +627,7 @@
             // 
             this.graphLblC_Volt.AutoSize = true;
             this.graphLblC_Volt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblC_Volt.Location = new System.Drawing.Point(735, 171);
+            this.graphLblC_Volt.Location = new System.Drawing.Point(734, 5);
             this.graphLblC_Volt.Name = "graphLblC_Volt";
             this.graphLblC_Volt.Size = new System.Drawing.Size(54, 13);
             this.graphLblC_Volt.TabIndex = 60;
@@ -637,7 +637,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label15.Location = new System.Drawing.Point(475, 171);
+            this.label15.Location = new System.Drawing.Point(492, 4);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(53, 13);
             this.label15.TabIndex = 60;
@@ -647,7 +647,7 @@
             // 
             this.graphLblC_Temp.AutoSize = true;
             this.graphLblC_Temp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblC_Temp.Location = new System.Drawing.Point(531, 171);
+            this.graphLblC_Temp.Location = new System.Drawing.Point(548, 4);
             this.graphLblC_Temp.Name = "graphLblC_Temp";
             this.graphLblC_Temp.Size = new System.Drawing.Size(47, 13);
             this.graphLblC_Temp.TabIndex = 60;
@@ -657,7 +657,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label16.Location = new System.Drawing.Point(270, 171);
+            this.label16.Location = new System.Drawing.Point(292, 6);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 60;
@@ -667,7 +667,7 @@
             // 
             this.graphLblC_Alt.AutoSize = true;
             this.graphLblC_Alt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.graphLblC_Alt.Location = new System.Drawing.Point(310, 171);
+            this.graphLblC_Alt.Location = new System.Drawing.Point(332, 6);
             this.graphLblC_Alt.Name = "graphLblC_Alt";
             this.graphLblC_Alt.Size = new System.Drawing.Size(32, 13);
             this.graphLblC_Alt.TabIndex = 60;
@@ -687,7 +687,7 @@
             this.chartTP_Temp.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea1.Name = "ChartArea1";
             this.chartTP_Temp.ChartAreas.Add(chartArea1);
-            this.chartTP_Temp.Location = new System.Drawing.Point(846, 592);
+            this.chartTP_Temp.Location = new System.Drawing.Point(846, 547);
             this.chartTP_Temp.Name = "chartTP_Temp";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -702,7 +702,7 @@
             this.chartTP_Point_Err.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea2.Name = "ChartArea1";
             this.chartTP_Point_Err.ChartAreas.Add(chartArea2);
-            this.chartTP_Point_Err.Location = new System.Drawing.Point(846, 404);
+            this.chartTP_Point_Err.Location = new System.Drawing.Point(846, 373);
             this.chartTP_Point_Err.Name = "chartTP_Point_Err";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -717,7 +717,7 @@
             this.chartTP_Accel_R.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea3.Name = "ChartArea1";
             this.chartTP_Accel_R.ChartAreas.Add(chartArea3);
-            this.chartTP_Accel_R.Location = new System.Drawing.Point(640, 592);
+            this.chartTP_Accel_R.Location = new System.Drawing.Point(640, 545);
             this.chartTP_Accel_R.Name = "chartTP_Accel_R";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -732,7 +732,7 @@
             this.chartTP_Mag_R.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea4.Name = "ChartArea1";
             this.chartTP_Mag_R.ChartAreas.Add(chartArea4);
-            this.chartTP_Mag_R.Location = new System.Drawing.Point(640, 404);
+            this.chartTP_Mag_R.Location = new System.Drawing.Point(640, 373);
             this.chartTP_Mag_R.Name = "chartTP_Mag_R";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -747,7 +747,7 @@
             this.chartTP_Accel_P.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea5.Name = "ChartArea1";
             this.chartTP_Accel_P.ChartAreas.Add(chartArea5);
-            this.chartTP_Accel_P.Location = new System.Drawing.Point(434, 592);
+            this.chartTP_Accel_P.Location = new System.Drawing.Point(434, 547);
             this.chartTP_Accel_P.Name = "chartTP_Accel_P";
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -762,7 +762,7 @@
             this.chartTP_Mag_P.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea6.Name = "ChartArea1";
             this.chartTP_Mag_P.ChartAreas.Add(chartArea6);
-            this.chartTP_Mag_P.Location = new System.Drawing.Point(434, 404);
+            this.chartTP_Mag_P.Location = new System.Drawing.Point(434, 373);
             this.chartTP_Mag_P.Name = "chartTP_Mag_P";
             series6.ChartArea = "ChartArea1";
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -777,7 +777,7 @@
             this.chartTP_Accel_Y.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea7.Name = "ChartArea1";
             this.chartTP_Accel_Y.ChartAreas.Add(chartArea7);
-            this.chartTP_Accel_Y.Location = new System.Drawing.Point(228, 592);
+            this.chartTP_Accel_Y.Location = new System.Drawing.Point(228, 546);
             this.chartTP_Accel_Y.Name = "chartTP_Accel_Y";
             series7.ChartArea = "ChartArea1";
             series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -792,7 +792,7 @@
             this.chartTP_Mag_Y.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea8.Name = "ChartArea1";
             this.chartTP_Mag_Y.ChartAreas.Add(chartArea8);
-            this.chartTP_Mag_Y.Location = new System.Drawing.Point(228, 404);
+            this.chartTP_Mag_Y.Location = new System.Drawing.Point(228, 373);
             this.chartTP_Mag_Y.Name = "chartTP_Mag_Y";
             series8.ChartArea = "ChartArea1";
             series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -807,7 +807,7 @@
             this.chartTP_Gyro_R.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea9.Name = "ChartArea1";
             this.chartTP_Gyro_R.ChartAreas.Add(chartArea9);
-            this.chartTP_Gyro_R.Location = new System.Drawing.Point(846, 207);
+            this.chartTP_Gyro_R.Location = new System.Drawing.Point(846, 191);
             this.chartTP_Gyro_R.Name = "chartTP_Gyro_R";
             series9.ChartArea = "ChartArea1";
             series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -837,7 +837,7 @@
             this.chartTP_Gyro_P.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea11.Name = "ChartArea1";
             this.chartTP_Gyro_P.ChartAreas.Add(chartArea11);
-            this.chartTP_Gyro_P.Location = new System.Drawing.Point(640, 207);
+            this.chartTP_Gyro_P.Location = new System.Drawing.Point(640, 190);
             this.chartTP_Gyro_P.Name = "chartTP_Gyro_P";
             series11.ChartArea = "ChartArea1";
             series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -867,7 +867,7 @@
             this.chartTP_Gyro_Y.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea13.Name = "ChartArea1";
             this.chartTP_Gyro_Y.ChartAreas.Add(chartArea13);
-            this.chartTP_Gyro_Y.Location = new System.Drawing.Point(434, 207);
+            this.chartTP_Gyro_Y.Location = new System.Drawing.Point(434, 189);
             this.chartTP_Gyro_Y.Name = "chartTP_Gyro_Y";
             series13.ChartArea = "ChartArea1";
             series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -897,7 +897,7 @@
             this.chartTP_Volt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             chartArea15.Name = "ChartArea1";
             this.chartTP_Volt.ChartAreas.Add(chartArea15);
-            this.chartTP_Volt.Location = new System.Drawing.Point(228, 207);
+            this.chartTP_Volt.Location = new System.Drawing.Point(228, 188);
             this.chartTP_Volt.Name = "chartTP_Volt";
             series15.ChartArea = "ChartArea1";
             series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -976,6 +976,17 @@
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "PMREL-Payl.Man.Release";
+            // 
+            // btnPmrelOffP
+            // 
+            this.btnPmrelOffP.BackColor = System.Drawing.Color.Salmon;
+            this.btnPmrelOffP.Location = new System.Drawing.Point(109, 51);
+            this.btnPmrelOffP.Name = "btnPmrelOffP";
+            this.btnPmrelOffP.Size = new System.Drawing.Size(85, 32);
+            this.btnPmrelOffP.TabIndex = 1;
+            this.btnPmrelOffP.Text = "OFF P";
+            this.btnPmrelOffP.UseVisualStyleBackColor = false;
+            this.btnPmrelOffP.Click += new System.EventHandler(this.btnPmrelOffP_Click);
             // 
             // btnPmrelOffT
             // 
@@ -2173,17 +2184,6 @@
             this.btnRestart.Text = "restart";
             this.btnRestart.UseVisualStyleBackColor = true;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
-            // 
-            // btnPmrelOffP
-            // 
-            this.btnPmrelOffP.BackColor = System.Drawing.Color.Salmon;
-            this.btnPmrelOffP.Location = new System.Drawing.Point(109, 51);
-            this.btnPmrelOffP.Name = "btnPmrelOffP";
-            this.btnPmrelOffP.Size = new System.Drawing.Size(85, 32);
-            this.btnPmrelOffP.TabIndex = 1;
-            this.btnPmrelOffP.Text = "OFF P";
-            this.btnPmrelOffP.UseVisualStyleBackColor = false;
-            this.btnPmrelOffP.Click += new System.EventHandler(this.btnPmrelOffP_Click);
             // 
             // Form1
             // 
