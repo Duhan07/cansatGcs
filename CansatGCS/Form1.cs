@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Windows.Forms.DataVisualization.Charting;
 
-//dee
+//26.03.2022 09:56
 namespace CansatGCS
 {
     public partial class Form1 : Form
