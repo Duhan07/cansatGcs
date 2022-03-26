@@ -10,14 +10,17 @@ using System.IO;
 using System.IO.Ports;
 using System.Windows.Forms;
 using System.Net;
-using System.Windows.Forms.DataVisualization.Charting;
 
+using uPLibrary.Networking.M2Mqtt;
+using uPLibrary.Networking.M2Mqtt.Messages;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Threading.Tasks;
 
 namespace CansatGCS
 {
     public partial class Form1 : Form
     {
-
+        MqttClient mqttClient;
         public Form1()
         {
             InitializeComponent();
@@ -72,16 +75,26 @@ namespace CansatGCS
             listWievContainerTelemetry.Columns.Add("GpsStats");
             listWievContainerTelemetry.Columns.Add("SoftwareState");
             listWievContainerTelemetry.Columns.Add("CmdEcho");
-         
 
 
 
-           
+            Task.Run(() =>
+            {
+                mqttClient = new MqttClient(TxtboxMqttlServerName.Text);
+                mqttClient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived;
+                mqttClient.Subscribe(new string[] { TextboxMqttTopic.Text }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });
+                mqttClient.Connect("", TxtboxMqttUserName.Text, TextboxMqttUserPassword.Text);
+            });
 
-            
+
+
         }
 
-
+        private void MqttClient_MqttMsgPublishReceived(object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
+        {
+            var message = Encoding.UTF8.GetString(e.Message);
+            listBoxMqttValue.Invoke((MethodInvoker)(() => listBoxMqttValue.Items.Add(message)));
+        }
 
 
         private void btnSerialConnect_Click(object sender, EventArgs e)
@@ -305,7 +318,7 @@ namespace CansatGCS
                 grafikGoster();
             }
 
-
+           
 
         }
 
@@ -521,8 +534,9 @@ namespace CansatGCS
                 grbBoxMqttCsvSave.BackColor = Color.Green;
                 timerMqttCsvSave.Start();
 
-                btnMqttStart.Enabled = false;
-                btnMqttStop.Enabled = true;
+              
+                timerMqtt.Enabled = true;
+                timerMqtt.Start();
             }
         }
 
@@ -534,14 +548,38 @@ namespace CansatGCS
                 timerMqttCsvSave.Stop();
                 grbBoxMqttCsvSave.BackColor = Color.Red;
 
-                btnMqttStart.Enabled = true;
-                btnMqttStop.Enabled = false;
+                timerMqtt.Enabled = false;
+                timerMqtt.Stop();
             }
         }
 
+        private void btnMqttValueGonder_Click(object sender, EventArgs e)
+        {
+            // mqtt nin butonla manuel hali
+            Task.Run(() =>
+            {
+                if (mqttClient != null && mqttClient.IsConnected)
+                {
+                    mqttClient.Publish(TextboxMqttTopic.Text, Encoding.UTF8.GetBytes(lblGelenVeri.Text));
+                }
+            });
+        }
+
+        private void timerMqtt_Tick(object sender, EventArgs e)
+            // mqttnin otomatik hali 
+        {
+            Task.Run(() =>
+            {
+                if (mqttClient != null && mqttClient.IsConnected)
+                {
+                    mqttClient.Publish(TextboxMqttTopic.Text, Encoding.UTF8.GetBytes(lblGelenVeri.Text));
+                }
+            });
+        }
 
         void csvSil()
         {
+            // csv sil butonunun calıstırdıgı yer
             if (File.Exists(txtBoxContainerCsv.Text))
             {
             
