@@ -300,6 +300,7 @@ namespace CansatGCS
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Form kapatılınca olması gerekenler yazıyoruz.
+            Environment.Exit(0);
         }
 
         private void timerVeriYazdir_Tick(object sender, EventArgs e)

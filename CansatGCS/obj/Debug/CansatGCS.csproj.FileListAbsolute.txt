@@ -64,3 +64,6 @@ C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.4.0\cansatGcs\CansatGCS\o
 C:\Users\yns3g\Desktop\cansat\GCS\cansatGcs\CansatGCS\bin\Debug\M2Mqtt.Net.dll
 C:\Users\yns3g\Desktop\cansat\GCS\cansatGcs\CansatGCS\bin\Debug\M2Mqtt.Net.pdb
 C:\Users\yns3g\Desktop\cansat\GCS\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.CopyComplete
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.4.0\cansatGcs\CansatGCS\bin\Debug\M2Mqtt.Net.dll
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.4.0\cansatGcs\CansatGCS\bin\Debug\M2Mqtt.Net.pdb
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.4.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.CopyComplete
