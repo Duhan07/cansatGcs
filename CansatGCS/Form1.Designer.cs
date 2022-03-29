@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+<<<<<<< HEAD
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
@@ -61,6 +62,40 @@
             System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea32 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
+=======
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea49 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series49 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea50 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series50 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea51 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series51 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea52 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series52 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea53 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series53 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea54 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series54 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea55 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series55 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea56 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series56 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea57 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series57 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea58 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series58 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea59 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series59 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea60 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series60 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea61 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series61 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea62 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series62 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea63 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series63 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea64 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series64 = new System.Windows.Forms.DataVisualization.Charting.Series();
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
@@ -241,6 +276,9 @@
             this.timerCsvSave = new System.Windows.Forms.Timer(this.components);
             this.timerMqtt = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAppRestart = new System.Windows.Forms.Button();
+            this.btnDeleteCsv = new System.Windows.Forms.Button();
+            this.btnGraphClear = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartTP_Temp)).BeginInit();
@@ -724,6 +762,7 @@
             // chartTP_Temp
             // 
             this.chartTP_Temp.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea17.Name = "ChartArea1";
             this.chartTP_Temp.ChartAreas.Add(chartArea17);
             this.chartTP_Temp.Location = new System.Drawing.Point(1128, 656);
@@ -734,12 +773,24 @@
             series17.Name = "TP_Temp";
             this.chartTP_Temp.Series.Add(series17);
             this.chartTP_Temp.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea49.Name = "ChartArea1";
+            this.chartTP_Temp.ChartAreas.Add(chartArea49);
+            this.chartTP_Temp.Location = new System.Drawing.Point(846, 533);
+            this.chartTP_Temp.Name = "chartTP_Temp";
+            series49.ChartArea = "ChartArea1";
+            series49.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series49.Name = "TP_Temp";
+            this.chartTP_Temp.Series.Add(series49);
+            this.chartTP_Temp.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Temp.TabIndex = 9;
             this.chartTP_Temp.Text = "chart1";
             // 
             // chartTP_Point_Err
             // 
             this.chartTP_Point_Err.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea18.Name = "ChartArea1";
             this.chartTP_Point_Err.ChartAreas.Add(chartArea18);
             this.chartTP_Point_Err.Location = new System.Drawing.Point(1128, 443);
@@ -750,12 +801,24 @@
             series18.Name = "TP_Point_Err";
             this.chartTP_Point_Err.Series.Add(series18);
             this.chartTP_Point_Err.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea50.Name = "ChartArea1";
+            this.chartTP_Point_Err.ChartAreas.Add(chartArea50);
+            this.chartTP_Point_Err.Location = new System.Drawing.Point(846, 360);
+            this.chartTP_Point_Err.Name = "chartTP_Point_Err";
+            series50.ChartArea = "ChartArea1";
+            series50.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series50.Name = "TP_Point_Err";
+            this.chartTP_Point_Err.Series.Add(series50);
+            this.chartTP_Point_Err.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Point_Err.TabIndex = 10;
             this.chartTP_Point_Err.Text = "chart1";
             // 
             // chartTP_Accel_R
             // 
             this.chartTP_Accel_R.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea19.Name = "ChartArea1";
             this.chartTP_Accel_R.ChartAreas.Add(chartArea19);
             this.chartTP_Accel_R.Location = new System.Drawing.Point(853, 654);
@@ -766,12 +829,24 @@
             series19.Name = "TP_Accel_R";
             this.chartTP_Accel_R.Series.Add(series19);
             this.chartTP_Accel_R.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea51.Name = "ChartArea1";
+            this.chartTP_Accel_R.ChartAreas.Add(chartArea51);
+            this.chartTP_Accel_R.Location = new System.Drawing.Point(640, 531);
+            this.chartTP_Accel_R.Name = "chartTP_Accel_R";
+            series51.ChartArea = "ChartArea1";
+            series51.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series51.Name = "TP_Accel_R";
+            this.chartTP_Accel_R.Series.Add(series51);
+            this.chartTP_Accel_R.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Accel_R.TabIndex = 11;
             this.chartTP_Accel_R.Text = "chart1";
             // 
             // chartTP_Mag_R
             // 
             this.chartTP_Mag_R.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea20.Name = "ChartArea1";
             this.chartTP_Mag_R.ChartAreas.Add(chartArea20);
             this.chartTP_Mag_R.Location = new System.Drawing.Point(853, 443);
@@ -782,12 +857,24 @@
             series20.Name = "TP_Mag_R";
             this.chartTP_Mag_R.Series.Add(series20);
             this.chartTP_Mag_R.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea52.Name = "ChartArea1";
+            this.chartTP_Mag_R.ChartAreas.Add(chartArea52);
+            this.chartTP_Mag_R.Location = new System.Drawing.Point(640, 360);
+            this.chartTP_Mag_R.Name = "chartTP_Mag_R";
+            series52.ChartArea = "ChartArea1";
+            series52.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series52.Name = "TP_Mag_R";
+            this.chartTP_Mag_R.Series.Add(series52);
+            this.chartTP_Mag_R.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Mag_R.TabIndex = 12;
             this.chartTP_Mag_R.Text = "chart1";
             // 
             // chartTP_Accel_P
             // 
             this.chartTP_Accel_P.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea21.Name = "ChartArea1";
             this.chartTP_Accel_P.ChartAreas.Add(chartArea21);
             this.chartTP_Accel_P.Location = new System.Drawing.Point(579, 656);
@@ -798,12 +885,24 @@
             series21.Name = "TP_Accel_P";
             this.chartTP_Accel_P.Series.Add(series21);
             this.chartTP_Accel_P.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea53.Name = "ChartArea1";
+            this.chartTP_Accel_P.ChartAreas.Add(chartArea53);
+            this.chartTP_Accel_P.Location = new System.Drawing.Point(434, 533);
+            this.chartTP_Accel_P.Name = "chartTP_Accel_P";
+            series53.ChartArea = "ChartArea1";
+            series53.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series53.Name = "TP_Accel_P";
+            this.chartTP_Accel_P.Series.Add(series53);
+            this.chartTP_Accel_P.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Accel_P.TabIndex = 13;
             this.chartTP_Accel_P.Text = "chart1";
             // 
             // chartTP_Mag_P
             // 
             this.chartTP_Mag_P.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea22.Name = "ChartArea1";
             this.chartTP_Mag_P.ChartAreas.Add(chartArea22);
             this.chartTP_Mag_P.Location = new System.Drawing.Point(579, 443);
@@ -814,12 +913,24 @@
             series22.Name = "TP_Mag_P";
             this.chartTP_Mag_P.Series.Add(series22);
             this.chartTP_Mag_P.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea54.Name = "ChartArea1";
+            this.chartTP_Mag_P.ChartAreas.Add(chartArea54);
+            this.chartTP_Mag_P.Location = new System.Drawing.Point(434, 360);
+            this.chartTP_Mag_P.Name = "chartTP_Mag_P";
+            series54.ChartArea = "ChartArea1";
+            series54.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series54.Name = "TP_Mag_P";
+            this.chartTP_Mag_P.Series.Add(series54);
+            this.chartTP_Mag_P.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Mag_P.TabIndex = 14;
             this.chartTP_Mag_P.Text = "chart1";
             // 
             // chartTP_Accel_Y
             // 
             this.chartTP_Accel_Y.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea23.Name = "ChartArea1";
             this.chartTP_Accel_Y.ChartAreas.Add(chartArea23);
             this.chartTP_Accel_Y.Location = new System.Drawing.Point(304, 655);
@@ -830,12 +941,24 @@
             series23.Name = "TP_Accel_Y";
             this.chartTP_Accel_Y.Series.Add(series23);
             this.chartTP_Accel_Y.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea55.Name = "ChartArea1";
+            this.chartTP_Accel_Y.ChartAreas.Add(chartArea55);
+            this.chartTP_Accel_Y.Location = new System.Drawing.Point(228, 532);
+            this.chartTP_Accel_Y.Name = "chartTP_Accel_Y";
+            series55.ChartArea = "ChartArea1";
+            series55.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series55.Name = "TP_Accel_Y";
+            this.chartTP_Accel_Y.Series.Add(series55);
+            this.chartTP_Accel_Y.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Accel_Y.TabIndex = 15;
             this.chartTP_Accel_Y.Text = "chart1";
             // 
             // chartTP_Mag_Y
             // 
             this.chartTP_Mag_Y.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea24.Name = "ChartArea1";
             this.chartTP_Mag_Y.ChartAreas.Add(chartArea24);
             this.chartTP_Mag_Y.Location = new System.Drawing.Point(304, 443);
@@ -846,12 +969,24 @@
             series24.Name = "TP_Mag_Y";
             this.chartTP_Mag_Y.Series.Add(series24);
             this.chartTP_Mag_Y.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea56.Name = "ChartArea1";
+            this.chartTP_Mag_Y.ChartAreas.Add(chartArea56);
+            this.chartTP_Mag_Y.Location = new System.Drawing.Point(228, 360);
+            this.chartTP_Mag_Y.Name = "chartTP_Mag_Y";
+            series56.ChartArea = "ChartArea1";
+            series56.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series56.Name = "TP_Mag_Y";
+            this.chartTP_Mag_Y.Series.Add(series56);
+            this.chartTP_Mag_Y.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Mag_Y.TabIndex = 16;
             this.chartTP_Mag_Y.Text = "chart16";
             // 
             // chartTP_Gyro_R
             // 
             this.chartTP_Gyro_R.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea25.Name = "ChartArea1";
             this.chartTP_Gyro_R.ChartAreas.Add(chartArea25);
             this.chartTP_Gyro_R.Location = new System.Drawing.Point(1128, 235);
@@ -862,12 +997,24 @@
             series25.Name = "TP_Gyro_R";
             this.chartTP_Gyro_R.Series.Add(series25);
             this.chartTP_Gyro_R.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea57.Name = "ChartArea1";
+            this.chartTP_Gyro_R.ChartAreas.Add(chartArea57);
+            this.chartTP_Gyro_R.Location = new System.Drawing.Point(846, 191);
+            this.chartTP_Gyro_R.Name = "chartTP_Gyro_R";
+            series57.ChartArea = "ChartArea1";
+            series57.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series57.Name = "TP_Gyro_R";
+            this.chartTP_Gyro_R.Series.Add(series57);
+            this.chartTP_Gyro_R.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Gyro_R.TabIndex = 8;
             this.chartTP_Gyro_R.Text = "chart1";
             // 
             // chartTP_Alt
             // 
             this.chartTP_Alt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea26.Name = "ChartArea1";
             this.chartTP_Alt.ChartAreas.Add(chartArea26);
             this.chartTP_Alt.Location = new System.Drawing.Point(1128, 17);
@@ -878,12 +1025,24 @@
             series26.Name = "TP_Alt";
             this.chartTP_Alt.Series.Add(series26);
             this.chartTP_Alt.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea58.Name = "ChartArea1";
+            this.chartTP_Alt.ChartAreas.Add(chartArea58);
+            this.chartTP_Alt.Location = new System.Drawing.Point(846, 14);
+            this.chartTP_Alt.Name = "chartTP_Alt";
+            series58.ChartArea = "ChartArea1";
+            series58.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series58.Name = "TP_Alt";
+            this.chartTP_Alt.Series.Add(series58);
+            this.chartTP_Alt.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Alt.TabIndex = 8;
             this.chartTP_Alt.Text = "chart1";
             // 
             // chartTP_Gyro_P
             // 
             this.chartTP_Gyro_P.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea27.Name = "ChartArea1";
             this.chartTP_Gyro_P.ChartAreas.Add(chartArea27);
             this.chartTP_Gyro_P.Location = new System.Drawing.Point(853, 234);
@@ -894,12 +1053,24 @@
             series27.Name = "TP_Gyro_P";
             this.chartTP_Gyro_P.Series.Add(series27);
             this.chartTP_Gyro_P.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea59.Name = "ChartArea1";
+            this.chartTP_Gyro_P.ChartAreas.Add(chartArea59);
+            this.chartTP_Gyro_P.Location = new System.Drawing.Point(640, 190);
+            this.chartTP_Gyro_P.Name = "chartTP_Gyro_P";
+            series59.ChartArea = "ChartArea1";
+            series59.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series59.Name = "TP_Gyro_P";
+            this.chartTP_Gyro_P.Series.Add(series59);
+            this.chartTP_Gyro_P.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Gyro_P.TabIndex = 8;
             this.chartTP_Gyro_P.Text = "chart1";
             // 
             // chartC_Volt
             // 
             this.chartC_Volt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea28.Name = "ChartArea1";
             this.chartC_Volt.ChartAreas.Add(chartArea28);
             this.chartC_Volt.Location = new System.Drawing.Point(853, 18);
@@ -910,12 +1081,24 @@
             series28.Name = "C_Volt";
             this.chartC_Volt.Series.Add(series28);
             this.chartC_Volt.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea60.Name = "ChartArea1";
+            this.chartC_Volt.ChartAreas.Add(chartArea60);
+            this.chartC_Volt.Location = new System.Drawing.Point(640, 15);
+            this.chartC_Volt.Name = "chartC_Volt";
+            series60.ChartArea = "ChartArea1";
+            series60.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series60.Name = "C_Volt";
+            this.chartC_Volt.Series.Add(series60);
+            this.chartC_Volt.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartC_Volt.TabIndex = 8;
             this.chartC_Volt.Text = "chart1";
             // 
             // chartTP_Gyro_Y
             // 
             this.chartTP_Gyro_Y.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea29.Name = "ChartArea1";
             this.chartTP_Gyro_Y.ChartAreas.Add(chartArea29);
             this.chartTP_Gyro_Y.Location = new System.Drawing.Point(579, 233);
@@ -926,12 +1109,24 @@
             series29.Name = "TP_Gyro_Y";
             this.chartTP_Gyro_Y.Series.Add(series29);
             this.chartTP_Gyro_Y.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea61.Name = "ChartArea1";
+            this.chartTP_Gyro_Y.ChartAreas.Add(chartArea61);
+            this.chartTP_Gyro_Y.Location = new System.Drawing.Point(434, 189);
+            this.chartTP_Gyro_Y.Name = "chartTP_Gyro_Y";
+            series61.ChartArea = "ChartArea1";
+            series61.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series61.Name = "TP_Gyro_Y";
+            this.chartTP_Gyro_Y.Series.Add(series61);
+            this.chartTP_Gyro_Y.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Gyro_Y.TabIndex = 8;
             this.chartTP_Gyro_Y.Text = "chart1";
             // 
             // chartC_Temp
             // 
             this.chartC_Temp.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea30.Name = "ChartArea1";
             this.chartC_Temp.ChartAreas.Add(chartArea30);
             this.chartC_Temp.Location = new System.Drawing.Point(579, 17);
@@ -942,12 +1137,24 @@
             series30.Name = "C_Temp";
             this.chartC_Temp.Series.Add(series30);
             this.chartC_Temp.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea62.Name = "ChartArea1";
+            this.chartC_Temp.ChartAreas.Add(chartArea62);
+            this.chartC_Temp.Location = new System.Drawing.Point(434, 14);
+            this.chartC_Temp.Name = "chartC_Temp";
+            series62.ChartArea = "ChartArea1";
+            series62.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series62.Name = "C_Temp";
+            this.chartC_Temp.Series.Add(series62);
+            this.chartC_Temp.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartC_Temp.TabIndex = 8;
             this.chartC_Temp.Text = "chart1";
             // 
             // chartTP_Volt
             // 
             this.chartTP_Volt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea31.Name = "ChartArea1";
             this.chartTP_Volt.ChartAreas.Add(chartArea31);
             this.chartTP_Volt.Location = new System.Drawing.Point(304, 231);
@@ -958,12 +1165,24 @@
             series31.Name = "TP_Volt";
             this.chartTP_Volt.Series.Add(series31);
             this.chartTP_Volt.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea63.Name = "ChartArea1";
+            this.chartTP_Volt.ChartAreas.Add(chartArea63);
+            this.chartTP_Volt.Location = new System.Drawing.Point(228, 188);
+            this.chartTP_Volt.Name = "chartTP_Volt";
+            series63.ChartArea = "ChartArea1";
+            series63.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series63.Name = "TP_Volt";
+            this.chartTP_Volt.Series.Add(series63);
+            this.chartTP_Volt.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartTP_Volt.TabIndex = 8;
             this.chartTP_Volt.Text = "chart1";
             // 
             // chartC_Alt
             // 
             this.chartC_Alt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
             chartArea32.Name = "ChartArea1";
             this.chartC_Alt.ChartAreas.Add(chartArea32);
             this.chartC_Alt.Location = new System.Drawing.Point(304, 17);
@@ -975,6 +1194,18 @@
             series32.Name = "C_Alt";
             this.chartC_Alt.Series.Add(series32);
             this.chartC_Alt.Size = new System.Drawing.Size(267, 185);
+=======
+            chartArea64.Name = "ChartArea1";
+            this.chartC_Alt.ChartAreas.Add(chartArea64);
+            this.chartC_Alt.Location = new System.Drawing.Point(228, 14);
+            this.chartC_Alt.Name = "chartC_Alt";
+            series64.ChartArea = "ChartArea1";
+            series64.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series64.Legend = "Legend1";
+            series64.Name = "C_Alt";
+            this.chartC_Alt.Series.Add(series64);
+            this.chartC_Alt.Size = new System.Drawing.Size(200, 150);
+>>>>>>> 1021ec4f7d22c596517138f687dd855475c6a0a2
             this.chartC_Alt.TabIndex = 8;
             this.chartC_Alt.Text = "chart1";
             // 
@@ -1396,6 +1627,9 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btnGraphClear);
+            this.tabPage4.Controls.Add(this.btnDeleteCsv);
+            this.tabPage4.Controls.Add(this.btnAppRestart);
             this.tabPage4.Controls.Add(this.lblShortTime);
             this.tabPage4.Controls.Add(this.lblLongtime);
             this.tabPage4.Controls.Add(this.richTxtBoxGelenVeri);
@@ -2402,6 +2636,36 @@
             this.pictureBox1.TabIndex = 59;
             this.pictureBox1.TabStop = false;
             // 
+            // btnAppRestart
+            // 
+            this.btnAppRestart.Location = new System.Drawing.Point(18, 128);
+            this.btnAppRestart.Name = "btnAppRestart";
+            this.btnAppRestart.Size = new System.Drawing.Size(75, 23);
+            this.btnAppRestart.TabIndex = 62;
+            this.btnAppRestart.Text = "GCS Restart";
+            this.btnAppRestart.UseVisualStyleBackColor = true;
+            this.btnAppRestart.Click += new System.EventHandler(this.btnAppRestart_Click);
+            // 
+            // btnDeleteCsv
+            // 
+            this.btnDeleteCsv.Location = new System.Drawing.Point(138, 128);
+            this.btnDeleteCsv.Name = "btnDeleteCsv";
+            this.btnDeleteCsv.Size = new System.Drawing.Size(108, 23);
+            this.btnDeleteCsv.TabIndex = 63;
+            this.btnDeleteCsv.Text = "DELETE CSV ";
+            this.btnDeleteCsv.UseVisualStyleBackColor = true;
+            this.btnDeleteCsv.Click += new System.EventHandler(this.btnDeleteCsv_Click);
+            // 
+            // btnGraphClear
+            // 
+            this.btnGraphClear.Location = new System.Drawing.Point(273, 129);
+            this.btnGraphClear.Name = "btnGraphClear";
+            this.btnGraphClear.Size = new System.Drawing.Size(75, 23);
+            this.btnGraphClear.TabIndex = 63;
+            this.btnGraphClear.Text = "Clear Graph";
+            this.btnGraphClear.UseVisualStyleBackColor = true;
+            this.btnGraphClear.Click += new System.EventHandler(this.btnGraphClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2643,6 +2907,9 @@
         private System.Windows.Forms.ListBox listBoxMqttValue;
         private System.Windows.Forms.Timer timerMqtt;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnGraphClear;
+        private System.Windows.Forms.Button btnDeleteCsv;
+        private System.Windows.Forms.Button btnAppRestart;
     }
 }
 
