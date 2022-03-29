@@ -328,6 +328,8 @@ namespace CansatGCS
         {
             timerSerialPort.Enabled = true;
             timerVeriYazdir.Start();
+            if (serialPort1.IsOpen)
+            { serialPort1.Write("CMD,1084,SGLP,SET"); }
         }
 
         private void btnCxOff_Click(object sender, EventArgs e)
@@ -393,8 +395,10 @@ namespace CansatGCS
         private void btnSetTime_Click(object sender, EventArgs e)
         {
             // SET TIME
+         
             if (serialPort1.IsOpen)
-            {  serialPort1.Write("CMD,1084,ST,12:05:27");}
+         
+            {  serialPort1.Write("CMD,1084,ST,"+lblShortTime.Text);}
            
         }
 
@@ -489,15 +493,13 @@ namespace CansatGCS
         }
 
 
-        private void btnCsvSil_Click_1(object sender, EventArgs e)
-        {
-            csvSil();
-        }
+       
+           // csvSil();
+        
 
-        private void btnRestart_Click(object sender, EventArgs e)
-        {
-            Application.Restart();  // butona koyunca istasyonu yeniden baslatabiliyoruz.
-        }
+     
+          //  Application.Restart();  // butona koyunca istasyonu yeniden baslatabiliyoruz.
+     
 
         private void graphLblTP_Gyro_R_Click(object sender, EventArgs e)
         {
@@ -509,7 +511,7 @@ namespace CansatGCS
 
             if (serialPort1.IsOpen)
             { 
-                serialPort1.Write("CMD,1084,PMREL,OFFT"); 
+                serialPort1.Write("CMD,1084,PMREL,OFFP"); 
             }
         }
 
@@ -570,6 +572,15 @@ namespace CansatGCS
                 }
             });
         }
+
+       
+
+   
+
+        //     Application.Restart();
+
+
+
 
         void csvSil()
         {
