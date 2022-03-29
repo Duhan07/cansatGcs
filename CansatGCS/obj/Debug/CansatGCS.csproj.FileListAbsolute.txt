@@ -67,3 +67,16 @@ C:\Users\yns3g\Desktop\cansat\GCS\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj
 C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.4.0\cansatGcs\CansatGCS\bin\Debug\M2Mqtt.Net.dll
 C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.4.0\cansatGcs\CansatGCS\bin\Debug\M2Mqtt.Net.pdb
 C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.4.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.CopyComplete
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\bin\Debug\CansatGCS.exe.config
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\bin\Debug\CansatGCS.exe
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\bin\Debug\CansatGCS.pdb
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\bin\Debug\M2Mqtt.Net.dll
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\bin\Debug\M2Mqtt.Net.pdb
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.AssemblyReference.cache
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.Form1.resources
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.Properties.Resources.resources
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.GenerateResource.cache
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.CoreCompileInputs.cache
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.csproj.CopyComplete
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.exe
+C:\Users\gnsld\Masaüstü\cansatGCS_genel\cansatGcs_v1.6.0\cansatGcs\CansatGCS\obj\Debug\CansatGCS.pdb

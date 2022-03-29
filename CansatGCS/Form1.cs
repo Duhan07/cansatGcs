@@ -573,9 +573,28 @@ namespace CansatGCS
             });
         }
 
-       
+        string path;
+        private void txtBoxSimModeCsv_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-   
+            openFileDialog1.InitialDirectory = Environment.CurrentDirectory;
+            openFileDialog1.Filter = "Csv Files (*.csv)|*.csv";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                path = openFileDialog1.FileName;
+            }
+
+            Console.WriteLine(path);
+
+        }
+
+
+
+
 
         //     Application.Restart();
 
