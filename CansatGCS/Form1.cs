@@ -121,7 +121,7 @@ namespace CansatGCS
                     btnSerialConnect.Text = "Disconnect";
                     btnSerialConnect.BackColor = Color.Green;
                     grbBoxSerialConnect.BackColor = Color.Green;
-                    lblHata.Text = "İstasyonla bağlantı kuruldu !";
+                    lblHata.Text = "Connect to GCS !";
                     lblHata.BackColor = System.Drawing.Color.LightGreen;
 
                     timerSerialPort.Enabled = false;
@@ -132,7 +132,7 @@ namespace CansatGCS
                 {
                     serialPort1.Close();
                     btnSerialConnect.Text = "Connect";
-                    lblHata.Text = "Bağlantı kurulu degil !";
+                    lblHata.Text = "The connect not found !";
                     btnSerialConnect.BackColor = Color.Red;
                     grbBoxSerialConnect.BackColor = Color.Red;
                     lblHata.BackColor = System.Drawing.Color.IndianRed;
@@ -177,7 +177,7 @@ namespace CansatGCS
                 }
                 else
                 {
-                    lblHata.Text = "Ayrıstırma !!";
+                    lblHata.Text = "decomposition !!";
                 }
                 if (sayac == 16 && veri.Contains("1084"))
                 {
@@ -291,7 +291,7 @@ namespace CansatGCS
             }
             catch (Exception)
             {
-                lblGelenVeri.Text = "gelenVeriGuncelle  fonk !!";
+                lblGelenVeri.Text = "ComingDataGuncelle  fonk !!";
                
             }
 
@@ -301,6 +301,7 @@ namespace CansatGCS
         {
             // Form kapatılınca olması gerekenler yazıyoruz.
             Environment.Exit(0);
+           
         }
 
         private void timerVeriYazdir_Tick(object sender, EventArgs e)
@@ -339,10 +340,7 @@ namespace CansatGCS
                 btnCsvSaveToStop_Click(sender, e);
             }
 
-            if (timerMqttCsvSave.Enabled == true)
-            {
-                btnMqttStop_Click(sender, e);
-            }
+            
         }
 
        
@@ -378,9 +376,9 @@ namespace CansatGCS
         private void btnSimpModeEnter_Click(object sender, EventArgs e)
         {
             // SIMP
-
+            String simpModValue = txtBoxSimpMode.Text;
             if (serialPort1.IsOpen)
-            { serialPort1.Write("CMD,1084,SIMP,10132");}
+            { serialPort1.Write("CMD,1084,SIMP,"+ simpModValue);}
             
         }
 
@@ -515,16 +513,11 @@ namespace CansatGCS
             }
         }
 
-        string mqtt_csv;
+
 
         private void timerMqttCsvSave_Tick(object sender, EventArgs e)
         {
-            mqtt_csv = Path.Combine(Environment.CurrentDirectory, txtBoxMqttCsv.Text);
-
-            using (StreamWriter file = new StreamWriter(mqtt_csv, true))
-            {
-                file.Write(lblGelenVeri.Text);
-            }
+          
         }
 
         private void btnMqttStart_Click(object sender, EventArgs e)
@@ -533,7 +526,7 @@ namespace CansatGCS
             if (serialPort1.IsOpen)
             {
                 grbBoxMqttCsvSave.BackColor = Color.Green;
-                timerMqttCsvSave.Start();
+              
 
               
                 timerMqtt.Enabled = true;
@@ -546,7 +539,7 @@ namespace CansatGCS
             // Stop Saving MQTT Csv File
             if (serialPort1.IsOpen)
             {
-                timerMqttCsvSave.Stop();
+               
                 grbBoxMqttCsvSave.BackColor = Color.Red;
 
                 timerMqtt.Enabled = false;
@@ -585,7 +578,7 @@ namespace CansatGCS
             {
             
                 File.Delete(txtBoxContainerCsv.Text);
-                lblHata.Text = "Container Veriler silindi listeleyebilirsiniz !";
+                lblHata.Text = "Container files are deleted !";
                 timerCsvSave.Stop();
             }
             if (File.Exists(txtBoxTetherPayloadCsv.Text))
@@ -593,10 +586,10 @@ namespace CansatGCS
               
               
                 File.Delete(txtBoxTetherPayloadCsv.Text);
-                lblHata.Text = " Payload Veriler silindi listeleyebilirsiniz !";
+                lblHata.Text = "T. Payload files are deleted  !";
                 timerCsvSave.Stop();
             }
-            else { lblHata.Text = "dosya yok "; }
+            else { lblHata.Text = "file not found ! "; }
         }
 
     }
