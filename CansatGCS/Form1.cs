@@ -573,14 +573,36 @@ namespace CansatGCS
             });
         }
 
-       
+        private void btnAppRestart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
 
-   
+        private void btnDeleteCsv_Click(object sender, EventArgs e)
+        {
+            csvSil();
+        }
 
-        //     Application.Restart();
-
-
-
+        private void btnGraphClear_Click(object sender, EventArgs e)
+        {
+            foreach (var series in chartC_Alt.Series) series.Points.Clear();
+            foreach (var series in chartC_Temp.Series) series.Points.Clear();
+            foreach (var series in chartC_Volt.Series) series.Points.Clear();
+            foreach (var series in chartTP_Alt.Series) series.Points.Clear();
+            foreach (var series in chartTP_Gyro_R.Series) series.Points.Clear();
+            foreach (var series in chartTP_Gyro_P.Series) series.Points.Clear();
+            foreach (var series in chartTP_Gyro_Y.Series) series.Points.Clear();
+            foreach (var series in chartTP_Volt.Series) series.Points.Clear();
+            foreach (var series in chartTP_Mag_Y.Series) series.Points.Clear();
+            foreach (var series in chartTP_Mag_P.Series) series.Points.Clear();
+            foreach (var series in chartTP_Mag_R.Series) series.Points.Clear();
+            foreach (var series in chartTP_Accel_P.Series) series.Points.Clear();
+            foreach (var series in chartTP_Accel_R.Series) series.Points.Clear();
+            foreach (var series in chartTP_Accel_Y.Series) series.Points.Clear();
+            foreach (var series in chartTP_Temp.Series) series.Points.Clear();
+            foreach (var series in chartTP_Point_Err.Series) series.Points.Clear();
+           
+        }
 
         void csvSil()
         {
